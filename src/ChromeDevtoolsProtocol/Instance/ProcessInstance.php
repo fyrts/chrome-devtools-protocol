@@ -50,7 +50,10 @@ class ProcessInstance implements InstanceInterface, CloseableResourceInterface
 		$this->process = null;
 
 		if ($this->temporaryUserDataDir !== null) {
-			(new Filesystem())->remove($this->temporaryUserDataDir);
+			$filesystem = new Filesystem();
+			if ($filesystem->exists($this->temporaryUserDataDir)) {
+				$filesystem->remove($this->temporaryUserDataDir);
+			}
 		}
 	}
 
