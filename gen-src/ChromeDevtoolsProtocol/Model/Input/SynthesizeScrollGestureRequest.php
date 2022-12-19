@@ -143,6 +143,7 @@ final class SynthesizeScrollGestureRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

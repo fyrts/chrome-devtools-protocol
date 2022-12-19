@@ -33,6 +33,7 @@ final class GetAdScriptIdResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

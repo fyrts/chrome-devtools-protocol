@@ -63,6 +63,7 @@ final class ObjectStoreIndex implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

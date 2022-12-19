@@ -76,6 +76,7 @@ final class ContinueResponseRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

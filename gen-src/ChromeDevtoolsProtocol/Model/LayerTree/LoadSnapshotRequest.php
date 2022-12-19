@@ -36,6 +36,7 @@ final class LoadSnapshotRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

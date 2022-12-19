@@ -33,6 +33,7 @@ final class RemoveInstrumentationBreakpointRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

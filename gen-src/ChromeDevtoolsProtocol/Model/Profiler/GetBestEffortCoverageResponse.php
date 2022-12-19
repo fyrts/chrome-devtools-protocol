@@ -36,6 +36,7 @@ final class GetBestEffortCoverageResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

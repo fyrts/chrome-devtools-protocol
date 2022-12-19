@@ -139,6 +139,7 @@ final class RequestInterceptedEvent implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

@@ -33,6 +33,7 @@ final class VisibleSecurityStateChangedEvent implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

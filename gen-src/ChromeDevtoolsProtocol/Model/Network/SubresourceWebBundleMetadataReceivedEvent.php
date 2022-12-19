@@ -46,6 +46,7 @@ final class SubresourceWebBundleMetadataReceivedEvent implements \JsonSerializab
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

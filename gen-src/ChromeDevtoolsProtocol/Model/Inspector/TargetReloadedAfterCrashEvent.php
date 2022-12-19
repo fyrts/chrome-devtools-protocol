@@ -22,6 +22,7 @@ final class TargetReloadedAfterCrashEvent implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

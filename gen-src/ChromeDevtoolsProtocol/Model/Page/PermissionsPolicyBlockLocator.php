@@ -35,6 +35,7 @@ final class PermissionsPolicyBlockLocator implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

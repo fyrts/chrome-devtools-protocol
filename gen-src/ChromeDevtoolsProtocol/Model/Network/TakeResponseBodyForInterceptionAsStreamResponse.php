@@ -29,6 +29,7 @@ final class TakeResponseBodyForInterceptionAsStreamResponse implements \JsonSeri
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

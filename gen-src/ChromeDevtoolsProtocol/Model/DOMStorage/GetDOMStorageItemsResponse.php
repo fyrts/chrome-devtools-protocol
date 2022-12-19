@@ -39,6 +39,7 @@ final class GetDOMStorageItemsResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

@@ -36,6 +36,7 @@ final class SetShowFlexOverlaysRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

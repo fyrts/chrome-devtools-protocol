@@ -29,6 +29,7 @@ final class GetFileInfoResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

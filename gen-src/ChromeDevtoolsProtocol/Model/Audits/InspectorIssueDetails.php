@@ -119,6 +119,7 @@ final class InspectorIssueDetails implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

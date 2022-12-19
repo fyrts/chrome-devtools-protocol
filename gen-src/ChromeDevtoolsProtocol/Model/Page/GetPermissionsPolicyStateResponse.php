@@ -32,6 +32,7 @@ final class GetPermissionsPolicyStateResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

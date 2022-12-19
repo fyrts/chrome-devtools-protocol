@@ -45,6 +45,7 @@ final class OriginTrialTokenWithStatus implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

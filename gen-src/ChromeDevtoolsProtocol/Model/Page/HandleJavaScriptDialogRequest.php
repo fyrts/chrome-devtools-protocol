@@ -43,6 +43,7 @@ final class HandleJavaScriptDialogRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

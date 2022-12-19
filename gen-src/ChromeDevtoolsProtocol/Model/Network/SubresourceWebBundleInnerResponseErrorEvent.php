@@ -63,6 +63,7 @@ final class SubresourceWebBundleInnerResponseErrorEvent implements \JsonSerializ
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

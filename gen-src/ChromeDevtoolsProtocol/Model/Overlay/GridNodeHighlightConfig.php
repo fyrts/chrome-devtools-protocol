@@ -43,6 +43,7 @@ final class GridNodeHighlightConfig implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

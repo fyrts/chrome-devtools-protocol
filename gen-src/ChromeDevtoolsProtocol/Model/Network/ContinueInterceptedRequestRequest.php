@@ -99,6 +99,7 @@ final class ContinueInterceptedRequestRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

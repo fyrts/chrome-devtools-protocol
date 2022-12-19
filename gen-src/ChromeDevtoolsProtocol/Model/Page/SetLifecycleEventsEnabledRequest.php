@@ -33,6 +33,7 @@ final class SetLifecycleEventsEnabledRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

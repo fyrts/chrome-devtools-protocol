@@ -53,6 +53,7 @@ final class GetPossibleBreakpointsRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

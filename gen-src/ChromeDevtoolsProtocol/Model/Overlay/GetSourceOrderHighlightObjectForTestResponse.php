@@ -33,6 +33,7 @@ final class GetSourceOrderHighlightObjectForTestResponse implements \JsonSeriali
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

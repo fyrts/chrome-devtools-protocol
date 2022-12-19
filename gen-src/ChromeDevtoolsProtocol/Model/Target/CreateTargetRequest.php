@@ -60,6 +60,13 @@ final class CreateTargetRequest implements \JsonSerializable
 	 */
 	public $background;
 
+	/**
+	 * Whether to create the target of type "tab".
+	 *
+	 * @var bool|null
+	 */
+	public $forTab;
+
 
 	/**
 	 * @param object $data
@@ -89,10 +96,14 @@ final class CreateTargetRequest implements \JsonSerializable
 		if (isset($data->background)) {
 			$instance->background = (bool)$data->background;
 		}
+		if (isset($data->forTab)) {
+			$instance->forTab = (bool)$data->forTab;
+		}
 		return $instance;
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();
@@ -116,6 +127,9 @@ final class CreateTargetRequest implements \JsonSerializable
 		}
 		if ($this->background !== null) {
 			$data->background = $this->background;
+		}
+		if ($this->forTab !== null) {
+			$data->forTab = $this->forTab;
 		}
 		return $data;
 	}

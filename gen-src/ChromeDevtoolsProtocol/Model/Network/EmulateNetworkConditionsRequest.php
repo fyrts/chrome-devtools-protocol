@@ -73,6 +73,7 @@ final class EmulateNetworkConditionsRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

@@ -93,6 +93,7 @@ final class ScreencastFrameMetadata implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

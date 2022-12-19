@@ -33,6 +33,7 @@ final class GetQueryingDescendantsForContainerRequest implements \JsonSerializab
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

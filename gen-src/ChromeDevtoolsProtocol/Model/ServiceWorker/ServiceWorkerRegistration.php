@@ -41,6 +41,7 @@ final class ServiceWorkerRegistration implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

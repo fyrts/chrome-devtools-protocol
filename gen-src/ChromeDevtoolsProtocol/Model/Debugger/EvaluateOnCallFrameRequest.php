@@ -113,6 +113,7 @@ final class EvaluateOnCallFrameRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

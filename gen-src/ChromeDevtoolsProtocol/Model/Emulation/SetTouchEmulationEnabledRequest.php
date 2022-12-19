@@ -43,6 +43,7 @@ final class SetTouchEmulationEnabledRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

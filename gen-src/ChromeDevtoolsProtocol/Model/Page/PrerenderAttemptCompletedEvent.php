@@ -55,6 +55,7 @@ final class PrerenderAttemptCompletedEvent implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

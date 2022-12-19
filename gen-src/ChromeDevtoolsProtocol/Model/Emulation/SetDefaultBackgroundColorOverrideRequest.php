@@ -35,6 +35,7 @@ final class SetDefaultBackgroundColorOverrideRequest implements \JsonSerializabl
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

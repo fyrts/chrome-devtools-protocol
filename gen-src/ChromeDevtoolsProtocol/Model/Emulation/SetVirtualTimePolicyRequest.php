@@ -59,6 +59,7 @@ final class SetVirtualTimePolicyRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

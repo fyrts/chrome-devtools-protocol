@@ -29,6 +29,7 @@ final class RemoveScriptToEvaluateOnNewDocumentRequest implements \JsonSerializa
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

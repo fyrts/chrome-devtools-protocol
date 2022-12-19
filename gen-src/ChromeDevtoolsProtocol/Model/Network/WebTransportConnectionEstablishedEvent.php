@@ -43,6 +43,7 @@ final class WebTransportConnectionEstablishedEvent implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

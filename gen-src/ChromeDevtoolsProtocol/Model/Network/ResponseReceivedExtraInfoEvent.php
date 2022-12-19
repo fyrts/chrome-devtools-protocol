@@ -86,6 +86,7 @@ final class ResponseReceivedExtraInfoEvent implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

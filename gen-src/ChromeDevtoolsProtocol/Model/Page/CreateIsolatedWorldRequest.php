@@ -53,6 +53,7 @@ final class CreateIsolatedWorldRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

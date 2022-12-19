@@ -33,6 +33,7 @@ final class SetAsyncCallStackDepthRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

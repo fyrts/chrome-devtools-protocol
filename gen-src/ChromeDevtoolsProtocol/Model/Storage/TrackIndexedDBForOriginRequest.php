@@ -33,6 +33,7 @@ final class TrackIndexedDBForOriginRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

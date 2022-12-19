@@ -65,6 +65,7 @@ final class LowTextContrastIssueDetails implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

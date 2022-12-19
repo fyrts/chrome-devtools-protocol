@@ -118,6 +118,7 @@ final class GetMatchedStylesForNodeResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

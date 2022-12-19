@@ -116,6 +116,7 @@ final class SignedExchangeSignature implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

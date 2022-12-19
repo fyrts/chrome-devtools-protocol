@@ -29,6 +29,7 @@ final class SetInterceptFileChooserDialogRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

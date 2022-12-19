@@ -227,6 +227,7 @@ final class NodeTreeSnapshot implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

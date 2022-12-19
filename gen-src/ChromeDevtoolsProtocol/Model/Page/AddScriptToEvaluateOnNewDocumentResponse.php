@@ -33,6 +33,7 @@ final class AddScriptToEvaluateOnNewDocumentResponse implements \JsonSerializabl
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

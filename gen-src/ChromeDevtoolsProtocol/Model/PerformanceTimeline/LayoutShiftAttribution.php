@@ -43,6 +43,7 @@ final class LayoutShiftAttribution implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

@@ -33,6 +33,7 @@ final class GetGridHighlightObjectsForTestResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

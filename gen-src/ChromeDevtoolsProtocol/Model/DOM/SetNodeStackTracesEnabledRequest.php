@@ -33,6 +33,7 @@ final class SetNodeStackTracesEnabledRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

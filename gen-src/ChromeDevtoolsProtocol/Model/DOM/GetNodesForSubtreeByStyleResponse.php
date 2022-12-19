@@ -39,6 +39,7 @@ final class GetNodesForSubtreeByStyleResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

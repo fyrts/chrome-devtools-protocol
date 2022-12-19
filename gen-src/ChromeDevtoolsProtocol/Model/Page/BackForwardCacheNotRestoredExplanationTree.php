@@ -59,6 +59,7 @@ final class BackForwardCacheNotRestoredExplanationTree implements \JsonSerializa
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

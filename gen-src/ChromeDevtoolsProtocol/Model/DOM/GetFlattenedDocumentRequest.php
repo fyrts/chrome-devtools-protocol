@@ -43,6 +43,7 @@ final class GetFlattenedDocumentRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

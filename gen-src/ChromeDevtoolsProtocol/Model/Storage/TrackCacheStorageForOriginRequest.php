@@ -33,6 +33,7 @@ final class TrackCacheStorageForOriginRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

@@ -33,6 +33,7 @@ final class SetBypassServiceWorkerRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

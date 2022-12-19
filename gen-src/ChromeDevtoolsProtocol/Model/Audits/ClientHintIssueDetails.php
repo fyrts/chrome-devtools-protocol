@@ -35,6 +35,7 @@ final class ClientHintIssueDetails implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

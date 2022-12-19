@@ -33,6 +33,7 @@ final class SetBreakpointsActiveRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

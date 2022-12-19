@@ -42,6 +42,7 @@ final class ReportingApiEndpointsChangedForOriginEvent implements \JsonSerializa
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

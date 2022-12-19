@@ -41,6 +41,7 @@ final class DeprecationIssueDetails implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

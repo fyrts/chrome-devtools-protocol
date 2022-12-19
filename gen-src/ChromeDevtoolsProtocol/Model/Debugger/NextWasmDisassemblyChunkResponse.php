@@ -33,6 +33,7 @@ final class NextWasmDisassemblyChunkResponse implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

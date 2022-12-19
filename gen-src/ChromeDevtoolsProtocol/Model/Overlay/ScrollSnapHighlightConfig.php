@@ -43,6 +43,7 @@ final class ScrollSnapHighlightConfig implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

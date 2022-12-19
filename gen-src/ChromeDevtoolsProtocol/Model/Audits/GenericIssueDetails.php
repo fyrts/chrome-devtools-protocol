@@ -21,6 +21,9 @@ final class GenericIssueDetails implements \JsonSerializable
 	/** @var string */
 	public $frameId;
 
+	/** @var int */
+	public $violatingNodeId;
+
 
 	/**
 	 * @param object $data
@@ -35,10 +38,14 @@ final class GenericIssueDetails implements \JsonSerializable
 		if (isset($data->frameId)) {
 			$instance->frameId = (string)$data->frameId;
 		}
+		if (isset($data->violatingNodeId)) {
+			$instance->violatingNodeId = (int)$data->violatingNodeId;
+		}
 		return $instance;
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();
@@ -47,6 +54,9 @@ final class GenericIssueDetails implements \JsonSerializable
 		}
 		if ($this->frameId !== null) {
 			$data->frameId = $this->frameId;
+		}
+		if ($this->violatingNodeId !== null) {
+			$data->violatingNodeId = $this->violatingNodeId;
 		}
 		return $data;
 	}

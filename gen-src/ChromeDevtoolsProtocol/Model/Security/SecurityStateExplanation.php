@@ -99,6 +99,7 @@ final class SecurityStateExplanation implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

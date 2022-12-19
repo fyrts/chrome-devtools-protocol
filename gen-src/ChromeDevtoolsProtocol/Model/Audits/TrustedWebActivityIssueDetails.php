@@ -65,6 +65,7 @@ final class TrustedWebActivityIssueDetails implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

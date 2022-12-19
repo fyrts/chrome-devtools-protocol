@@ -39,6 +39,7 @@ final class ExposeDevToolsProtocolRequest implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();

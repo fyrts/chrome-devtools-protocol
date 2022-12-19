@@ -30,6 +30,7 @@ final class MemoryDumpConfig implements \JsonSerializable
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize()
 	{
 		return $this->rawData;
