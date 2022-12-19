@@ -13,7 +13,7 @@ class WebSocketClientSocket extends ClientSocket
 	/**
 	 * TODO: fixed bug with non-blocking read, do not overwrite method after upstream merge
 	 */
-	public function receive($length = self::DEFAULT_RECEIVE_LENGTH)
+	public function receive($length = self::DEFAULT_RECEIVE_LENGTH): string
 	{
 		$buffer = '';
 		$metadata['unread_bytes'] = 0;

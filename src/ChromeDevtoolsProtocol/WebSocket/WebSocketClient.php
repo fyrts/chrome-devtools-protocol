@@ -12,7 +12,7 @@ class WebSocketClient extends Client
 	/** @var WebSocketClientSocket */
 	protected $socket;
 
-	protected function configure(array $options)
+	protected function configure(array $options): void
 	{
 		$options = array_merge([
 			"socket_class" => WebSocketClientSocket::class,
