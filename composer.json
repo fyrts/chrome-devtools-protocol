@@ -26,7 +26,7 @@
     "ext-json": "*",
     "guzzlehttp/guzzle": "^6.3|^7.0",
     "php": "^7.4|^8.0",
-    "symfony/filesystem": ">=2.3",
+    "symfony/filesystem": ">=5.3",
     "symfony/process": ">=4.4.30",
     "chrome-php/wrench": "^1.3"
   },
