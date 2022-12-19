@@ -73,7 +73,7 @@ class Instance implements InstanceInterface, InternalInstanceInterface
 	public function open(ContextInterface $ctx, ?string $url = null): Tab
 	{
 		$response = $this->httpClient->request(
-			"POST",
+			"PUT",
 			"http://{$this->host}:{$this->port}/json/new" . ($url !== null ? "?" . urlencode($url) : ""),
 			[
 				"timeout" => $ctx->getDeadline() !== null ? $ctx->deadlineFromNow() : 0,
