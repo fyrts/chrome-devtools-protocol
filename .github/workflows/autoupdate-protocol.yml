@@ -1,0 +1,49 @@
+name: "Update DevTools protocol file and regenerate code"
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 3 * * *'
+
+env:
+    GIT_BRANCH: master
+    GIT_USERNAME: Sam Feyaerts
+    GIT_EMAIL: sam@feyaerts.me
+
+jobs:
+    autoupdate_protocol:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v3
+
+            -   name: Cache dependencies
+                uses: actions/cache@v3
+                with:
+                    path: ~/.composer/cache/files
+                    key: php-8.1-composer-${{ hashFiles('composer.json') }}
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: 8.1
+                    extensions: mbstring, dom, curl, libxml, zip, pcntl, bcmath, intl, exif, iconv
+                    coverage: none
+
+            -   name: Install dependencies
+                run: composer update --prefer-dist --no-interaction --no-progress
+
+            -   name: Update protocol file
+                run: |
+                    set -ex
+                    git config --global user.name "$GIT_USERNAME"
+                    git config --global user.email "$GIT_EMAIL"
+                    git checkout $GIT_BRANCH
+                    make download-protocol fix-protocol regenerate
+                    git add protocol.json protocol.json.md5 gen-src
+                    if git diff --cached --exit-code; then
+                        echo "Nothing to commit."
+                    else
+                        git commit -m "autoupdated protocol.json & generated files"
+                        git push origin $GIT_BRANCH
+                    fi

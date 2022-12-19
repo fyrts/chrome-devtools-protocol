@@ -1,0 +1,29 @@
+name: "Check DevTools protocol file"
+
+on: [push, pull_request]
+
+jobs:
+    check_protocol:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v3
+
+            -   name: Cache dependencies
+                uses: actions/cache@v3
+                with:
+                    path: ~/.composer/cache/files
+                    key: php-8.1-composer-${{ hashFiles('composer.json') }}
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: 8.1
+                    extensions: mbstring, dom, curl, libxml, zip, pcntl, bcmath, intl, exif, iconv
+                    coverage: none
+
+            -   name: Install dependencies
+                run: composer update --prefer-dist --no-interaction --no-progress
+
+            -   name: Check protocol file
+                run: make download-protocol check-protocol
