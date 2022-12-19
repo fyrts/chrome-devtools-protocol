@@ -1,5 +1,5 @@
 {
-  "name": "jakubkulhan/chrome-devtools-protocol",
+  "name": "fyrts/chrome-devtools-protocol",
   "type": "library",
   "description": "Chrome Devtools Protocol client for PHP",
   "keywords": [
@@ -15,6 +15,10 @@
     {
       "name": "Jakub Kulhan",
       "email": "jakub.kulhan@gmail.com"
+    },
+    {
+      "name": "Sam Feyaerts",
+      "email": "sam@feyaerts.me"
     }
   ],
   "minimum-stability": "stable",
