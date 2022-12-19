@@ -9,7 +9,6 @@ use ChromeDevtoolsProtocol\Model\Security\CertificateErrorActionEnum;
 use ChromeDevtoolsProtocol\Model\Security\CertificateErrorEvent;
 use ChromeDevtoolsProtocol\Model\Security\HandleCertificateErrorRequest;
 use ChromeDevtoolsProtocol\Model\Security\SetOverrideCertificateErrorsRequest;
-use PHPUnit\Framework\TestCase;
 
 class DevtoolsClientTest extends TestCase
 {
@@ -18,9 +17,10 @@ class DevtoolsClientTest extends TestCase
 	{
 		$ctx = Context::withTimeout(Context::background(), 10);
 		$launcher = new Launcher();
+		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
 		try {
-			$tab = $instance->tabs($ctx)[0];
+			$tab = $instance->open($ctx);
 
 			$client = $tab->devtools();
 			try {
@@ -62,6 +62,7 @@ class DevtoolsClientTest extends TestCase
 
 		$ctx = Context::withTimeout(Context::background(), 10);
 		$launcher = new Launcher();
+		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
 		try {
 			$tabs = $instance->tabs($ctx);

@@ -1,7 +1,7 @@
 <?php
 namespace ChromeDevtoolsProtocol\Util;
 
-use PHPUnit\Framework\TestCase;
+use ChromeDevtoolsProtocol\TestCase;
 
 class HeadersUtilTest extends TestCase
 {

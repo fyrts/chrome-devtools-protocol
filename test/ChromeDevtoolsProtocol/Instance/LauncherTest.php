@@ -4,7 +4,7 @@ namespace ChromeDevtoolsProtocol\Instance;
 use ChromeDevtoolsProtocol\Context;
 use ChromeDevtoolsProtocol\Exception\LogicException;
 use ChromeDevtoolsProtocol\Model\Page\NavigateRequest;
-use PHPUnit\Framework\TestCase;
+use ChromeDevtoolsProtocol\TestCase;
 
 class LauncherTest extends TestCase
 {
@@ -13,6 +13,7 @@ class LauncherTest extends TestCase
 	{
 		$ctx = Context::withTimeout(Context::background(), 30);
 		$launcher = new Launcher();
+		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
 		try {
 			$tabs = $instance->tabs($ctx);

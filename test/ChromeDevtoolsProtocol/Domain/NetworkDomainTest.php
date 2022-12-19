@@ -9,7 +9,7 @@ use ChromeDevtoolsProtocol\Model\Network\RequestWillBeSentEvent;
 use ChromeDevtoolsProtocol\Model\Network\Response;
 use ChromeDevtoolsProtocol\Model\Network\ResponseReceivedEvent;
 use ChromeDevtoolsProtocol\Model\Page\NavigateRequest;
-use PHPUnit\Framework\TestCase;
+use ChromeDevtoolsProtocol\TestCase;
 
 class NetworkDomainTest extends TestCase
 {
@@ -18,6 +18,7 @@ class NetworkDomainTest extends TestCase
 	{
 		$ctx = Context::withTimeout(Context::background(), 10);
 		$launcher = new Launcher();
+		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
 		try {
 			$session = $instance->createSession($ctx);

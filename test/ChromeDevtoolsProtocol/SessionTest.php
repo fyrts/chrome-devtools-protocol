@@ -5,7 +5,6 @@ use ChromeDevtoolsProtocol\Exception\ErrorException;
 use ChromeDevtoolsProtocol\Instance\Launcher;
 use ChromeDevtoolsProtocol\Model\Network\GetCookiesRequest;
 use ChromeDevtoolsProtocol\Model\Page\NavigateRequest;
-use PHPUnit\Framework\TestCase;
 
 class SessionTest extends TestCase
 {
@@ -14,6 +13,7 @@ class SessionTest extends TestCase
 	{
 		$ctx = Context::withTimeout(Context::background(), 10);
 		$launcher = new Launcher();
+		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
 		try {
 			$session = $instance->createSession($ctx);
@@ -81,6 +81,7 @@ class SessionTest extends TestCase
 
 		$ctx = Context::withTimeout(Context::background(), 10);
 		$launcher = new Launcher();
+		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
 		try {
 			$session = $instance->createSession($ctx);
