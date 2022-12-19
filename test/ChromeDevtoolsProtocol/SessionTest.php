@@ -11,7 +11,7 @@ class SessionTest extends TestCase
 
 	public function testSessionIsolation()
 	{
-		$ctx = Context::withTimeout(Context::background(), 10);
+		$ctx = Context::withTimeout(Context::background(), 30);
 		$launcher = new Launcher();
 		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
@@ -79,7 +79,7 @@ class SessionTest extends TestCase
 	{
 		$this->expectException(ErrorException::class);
 
-		$ctx = Context::withTimeout(Context::background(), 10);
+		$ctx = Context::withTimeout(Context::background(), 30);
 		$launcher = new Launcher();
 		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
