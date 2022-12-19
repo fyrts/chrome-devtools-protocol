@@ -15,7 +15,7 @@ class DevtoolsClientTest extends TestCase
 
 	public function testHandleCertificateError()
 	{
-		$ctx = Context::withTimeout(Context::background(), 30);
+		$ctx = Context::withTimeout(Context::background(), 60);
 		$launcher = new Launcher();
 		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
@@ -60,7 +60,7 @@ class DevtoolsClientTest extends TestCase
 	{
 		$this->expectException(ErrorException::class);
 
-		$ctx = Context::withTimeout(Context::background(), 30);
+		$ctx = Context::withTimeout(Context::background(), 60);
 		$launcher = new Launcher();
 		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);

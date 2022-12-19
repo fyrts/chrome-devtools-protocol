@@ -11,7 +11,7 @@ class LauncherTest extends TestCase
 
 	public function testLaunch()
 	{
-		$ctx = Context::withTimeout(Context::background(), 30);
+		$ctx = Context::withTimeout(Context::background(), 60);
 		$launcher = new Launcher();
 		$this->setExecutable($launcher);
 		$instance = $launcher->launch($ctx);
