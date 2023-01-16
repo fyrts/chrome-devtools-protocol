@@ -45,7 +45,7 @@ jobs:
                         echo "Nothing to commit."
                     else
                         git fetch --tags origin
-                        VERSION=`git tag | sort -g | tail -1 | awk -F. '{OFS="."; $NF+=1; print $0}'`
+                        VERSION=`git tag | sort -V | tail -1 | awk -F. '{OFS="."; $NF+=1; print $0}'`
                         git commit -m "autoupdated protocol.json & generated files"
                         git tag -a $VERSION -m "autoupdated protocol.json & generated files"
                         git push --follow-tags origin $GIT_BRANCH
