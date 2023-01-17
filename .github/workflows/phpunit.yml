@@ -36,7 +36,7 @@ jobs:
                 id: chrome
                 with:
                     browser: chrome
-                    version: latest
+                    version: 1085317
 
             -   name: Install dependencies
                 run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-progress
