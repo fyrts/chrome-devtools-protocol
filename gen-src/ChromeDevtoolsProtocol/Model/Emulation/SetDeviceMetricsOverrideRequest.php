@@ -104,6 +104,13 @@ final class SetDeviceMetricsOverrideRequest implements \JsonSerializable
 	 */
 	public $displayFeature;
 
+	/**
+	 * If set, the posture of a foldable device. If not set the posture is set to continuous.
+	 *
+	 * @var DevicePosture|null
+	 */
+	public $devicePosture;
+
 
 	/**
 	 * @param object $data
@@ -151,6 +158,9 @@ final class SetDeviceMetricsOverrideRequest implements \JsonSerializable
 		if (isset($data->displayFeature)) {
 			$instance->displayFeature = DisplayFeature::fromJson($data->displayFeature);
 		}
+		if (isset($data->devicePosture)) {
+			$instance->devicePosture = DevicePosture::fromJson($data->devicePosture);
+		}
 		return $instance;
 	}
 
@@ -197,6 +207,9 @@ final class SetDeviceMetricsOverrideRequest implements \JsonSerializable
 		}
 		if ($this->displayFeature !== null) {
 			$data->displayFeature = $this->displayFeature->jsonSerialize();
+		}
+		if ($this->devicePosture !== null) {
+			$data->devicePosture = $this->devicePosture->jsonSerialize();
 		}
 		return $data;
 	}
