@@ -11,15 +11,15 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class InterestGroupAccessTypeEnum
 {
-	public const JOIN = 'join';
-	public const LEAVE = 'leave';
-	public const UPDATE = 'update';
-	public const LOADED = 'loaded';
-	public const BID = 'bid';
-	public const WIN = 'win';
-	public const ADDITIONAL_BID = 'additionalBid';
-	public const ADDITIONAL_BID_WIN = 'additionalBidWin';
-	public const TOP_LEVEL_BID = 'topLevelBid';
-	public const TOP_LEVEL_ADDITIONAL_BID = 'topLevelAdditionalBid';
-	public const CLEAR = 'clear';
+	const JOIN = 'join';
+	const LEAVE = 'leave';
+	const UPDATE = 'update';
+	const LOADED = 'loaded';
+	const BID = 'bid';
+	const WIN = 'win';
+	const ADDITIONAL_BID = 'additionalBid';
+	const ADDITIONAL_BID_WIN = 'additionalBidWin';
+	const TOP_LEVEL_BID = 'topLevelBid';
+	const TOP_LEVEL_ADDITIONAL_BID = 'topLevelAdditionalBid';
+	const CLEAR = 'clear';
 }

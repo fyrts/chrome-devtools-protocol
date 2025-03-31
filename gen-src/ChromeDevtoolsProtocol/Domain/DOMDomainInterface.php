@@ -137,7 +137,7 @@ interface DOMDomainInterface
 	 *
 	 * @return DescribeNodeResponse
 	 */
-	public function describeNode(ContextInterface $ctx, DescribeNodeRequest $request): DescribeNodeResponse;
+	public function describeNode(ContextInterface $ctx, ?DescribeNodeRequest $request = null): DescribeNodeResponse;
 
 
 	/**
@@ -169,7 +169,7 @@ interface DOMDomainInterface
 	 *
 	 * @return void
 	 */
-	public function enable(ContextInterface $ctx, EnableRequest $request): void;
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void;
 
 
 	/**
@@ -180,7 +180,7 @@ interface DOMDomainInterface
 	 *
 	 * @return void
 	 */
-	public function focus(ContextInterface $ctx, FocusRequest $request): void;
+	public function focus(ContextInterface $ctx, ?FocusRequest $request = null): void;
 
 
 	/**
@@ -213,7 +213,7 @@ interface DOMDomainInterface
 	 *
 	 * @return GetBoxModelResponse
 	 */
-	public function getBoxModel(ContextInterface $ctx, GetBoxModelRequest $request): GetBoxModelResponse;
+	public function getBoxModel(ContextInterface $ctx, ?GetBoxModelRequest $request = null): GetBoxModelResponse;
 
 
 	/**
@@ -238,7 +238,10 @@ interface DOMDomainInterface
 	 *
 	 * @return GetContentQuadsResponse
 	 */
-	public function getContentQuads(ContextInterface $ctx, GetContentQuadsRequest $request): GetContentQuadsResponse;
+	public function getContentQuads(
+		ContextInterface $ctx,
+		?GetContentQuadsRequest $request = null
+	): GetContentQuadsResponse;
 
 
 	/**
@@ -259,7 +262,7 @@ interface DOMDomainInterface
 	 *
 	 * @return GetDocumentResponse
 	 */
-	public function getDocument(ContextInterface $ctx, GetDocumentRequest $request): GetDocumentResponse;
+	public function getDocument(ContextInterface $ctx, ?GetDocumentRequest $request = null): GetDocumentResponse;
 
 
 	/**
@@ -297,7 +300,7 @@ interface DOMDomainInterface
 	 */
 	public function getFlattenedDocument(
 		ContextInterface $ctx,
-		GetFlattenedDocumentRequest $request
+		?GetFlattenedDocumentRequest $request = null
 	): GetFlattenedDocumentResponse;
 
 
@@ -362,7 +365,7 @@ interface DOMDomainInterface
 	 *
 	 * @return GetOuterHTMLResponse
 	 */
-	public function getOuterHTML(ContextInterface $ctx, GetOuterHTMLRequest $request): GetOuterHTMLResponse;
+	public function getOuterHTML(ContextInterface $ctx, ?GetOuterHTMLRequest $request = null): GetOuterHTMLResponse;
 
 
 	/**
@@ -588,7 +591,7 @@ interface DOMDomainInterface
 	 *
 	 * @return ResolveNodeResponse
 	 */
-	public function resolveNode(ContextInterface $ctx, ResolveNodeRequest $request): ResolveNodeResponse;
+	public function resolveNode(ContextInterface $ctx, ?ResolveNodeRequest $request = null): ResolveNodeResponse;
 
 
 	/**
@@ -599,7 +602,7 @@ interface DOMDomainInterface
 	 *
 	 * @return void
 	 */
-	public function scrollIntoViewIfNeeded(ContextInterface $ctx, ScrollIntoViewIfNeededRequest $request): void;
+	public function scrollIntoViewIfNeeded(ContextInterface $ctx, ?ScrollIntoViewIfNeededRequest $request = null): void;
 
 
 	/**

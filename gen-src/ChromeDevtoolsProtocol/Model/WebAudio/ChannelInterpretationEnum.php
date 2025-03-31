@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\WebAudio;
  */
 final class ChannelInterpretationEnum
 {
-	public const DISCRETE = 'discrete';
-	public const SPEAKERS = 'speakers';
+	const DISCRETE = 'discrete';
+	const SPEAKERS = 'speakers';
 }

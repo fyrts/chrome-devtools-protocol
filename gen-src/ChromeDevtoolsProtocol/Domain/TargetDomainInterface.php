@@ -108,7 +108,7 @@ interface TargetDomainInterface
 	 */
 	public function createBrowserContext(
 		ContextInterface $ctx,
-		CreateBrowserContextRequest $request
+		?CreateBrowserContextRequest $request = null
 	): CreateBrowserContextResponse;
 
 
@@ -131,7 +131,7 @@ interface TargetDomainInterface
 	 *
 	 * @return void
 	 */
-	public function detachFromTarget(ContextInterface $ctx, DetachFromTargetRequest $request): void;
+	public function detachFromTarget(ContextInterface $ctx, ?DetachFromTargetRequest $request = null): void;
 
 
 	/**
@@ -174,7 +174,7 @@ interface TargetDomainInterface
 	 *
 	 * @return GetTargetInfoResponse
 	 */
-	public function getTargetInfo(ContextInterface $ctx, GetTargetInfoRequest $request): GetTargetInfoResponse;
+	public function getTargetInfo(ContextInterface $ctx, ?GetTargetInfoRequest $request = null): GetTargetInfoResponse;
 
 
 	/**
@@ -185,7 +185,7 @@ interface TargetDomainInterface
 	 *
 	 * @return GetTargetsResponse
 	 */
-	public function getTargets(ContextInterface $ctx, GetTargetsRequest $request): GetTargetsResponse;
+	public function getTargets(ContextInterface $ctx, ?GetTargetsRequest $request = null): GetTargetsResponse;
 
 
 	/**

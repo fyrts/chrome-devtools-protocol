@@ -116,7 +116,7 @@ interface HeapProfilerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function startSampling(ContextInterface $ctx, StartSamplingRequest $request): void;
+	public function startSampling(ContextInterface $ctx, ?StartSamplingRequest $request = null): void;
 
 
 	/**
@@ -127,7 +127,7 @@ interface HeapProfilerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function startTrackingHeapObjects(ContextInterface $ctx, StartTrackingHeapObjectsRequest $request): void;
+	public function startTrackingHeapObjects(ContextInterface $ctx, ?StartTrackingHeapObjectsRequest $request = null): void;
 
 
 	/**
@@ -148,7 +148,7 @@ interface HeapProfilerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function stopTrackingHeapObjects(ContextInterface $ctx, StopTrackingHeapObjectsRequest $request): void;
+	public function stopTrackingHeapObjects(ContextInterface $ctx, ?StopTrackingHeapObjectsRequest $request = null): void;
 
 
 	/**
@@ -159,7 +159,7 @@ interface HeapProfilerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function takeHeapSnapshot(ContextInterface $ctx, TakeHeapSnapshotRequest $request): void;
+	public function takeHeapSnapshot(ContextInterface $ctx, ?TakeHeapSnapshotRequest $request = null): void;
 
 
 	/**

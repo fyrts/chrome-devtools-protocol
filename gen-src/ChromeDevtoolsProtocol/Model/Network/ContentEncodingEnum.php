@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class ContentEncodingEnum
 {
-	public const DEFLATE = 'deflate';
-	public const GZIP = 'gzip';
-	public const BR = 'br';
-	public const ZSTD = 'zstd';
+	const DEFLATE = 'deflate';
+	const GZIP = 'gzip';
+	const BR = 'br';
+	const ZSTD = 'zstd';
 }

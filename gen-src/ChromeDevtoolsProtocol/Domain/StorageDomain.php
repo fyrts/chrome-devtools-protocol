@@ -74,8 +74,9 @@ class StorageDomain implements StorageDomainInterface
 	}
 
 
-	public function clearCookies(ContextInterface $ctx, ClearCookiesRequest $request): void
+	public function clearCookies(ContextInterface $ctx, ?ClearCookiesRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Storage.clearCookies', $request);
 	}
 
@@ -126,8 +127,9 @@ class StorageDomain implements StorageDomainInterface
 	}
 
 
-	public function getCookies(ContextInterface $ctx, GetCookiesRequest $request): GetCookiesResponse
+	public function getCookies(ContextInterface $ctx, ?GetCookiesRequest $request = null): GetCookiesResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Storage.getCookies', $request);
 		return GetCookiesResponse::fromJson($response);
 	}

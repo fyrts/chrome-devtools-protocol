@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Security;
  */
 final class SafetyTipStatusEnum
 {
-	public const BAD_REPUTATION = 'badReputation';
-	public const LOOKALIKE = 'lookalike';
+	const BAD_REPUTATION = 'badReputation';
+	const LOOKALIKE = 'lookalike';
 }

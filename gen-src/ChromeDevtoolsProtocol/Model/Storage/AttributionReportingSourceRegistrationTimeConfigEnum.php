@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class AttributionReportingSourceRegistrationTimeConfigEnum
 {
-	public const INCLUDE = 'include';
-	public const EXCLUDE = 'exclude';
+	const INCLUDE = 'include';
+	const EXCLUDE = 'exclude';
 }

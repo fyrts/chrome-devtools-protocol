@@ -84,8 +84,9 @@ class TargetDomain implements TargetDomainInterface
 
 	public function createBrowserContext(
 		ContextInterface $ctx,
-		CreateBrowserContextRequest $request
+		?CreateBrowserContextRequest $request = null
 	): CreateBrowserContextResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Target.createBrowserContext', $request);
 		return CreateBrowserContextResponse::fromJson($response);
 	}
@@ -98,8 +99,9 @@ class TargetDomain implements TargetDomainInterface
 	}
 
 
-	public function detachFromTarget(ContextInterface $ctx, DetachFromTargetRequest $request): void
+	public function detachFromTarget(ContextInterface $ctx, ?DetachFromTargetRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Target.detachFromTarget', $request);
 	}
 
@@ -124,15 +126,17 @@ class TargetDomain implements TargetDomainInterface
 	}
 
 
-	public function getTargetInfo(ContextInterface $ctx, GetTargetInfoRequest $request): GetTargetInfoResponse
+	public function getTargetInfo(ContextInterface $ctx, ?GetTargetInfoRequest $request = null): GetTargetInfoResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Target.getTargetInfo', $request);
 		return GetTargetInfoResponse::fromJson($response);
 	}
 
 
-	public function getTargets(ContextInterface $ctx, GetTargetsRequest $request): GetTargetsResponse
+	public function getTargets(ContextInterface $ctx, ?GetTargetsRequest $request = null): GetTargetsResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Target.getTargets', $request);
 		return GetTargetsResponse::fromJson($response);
 	}

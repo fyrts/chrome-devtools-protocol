@@ -124,8 +124,9 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function describeNode(ContextInterface $ctx, DescribeNodeRequest $request): DescribeNodeResponse
+	public function describeNode(ContextInterface $ctx, ?DescribeNodeRequest $request = null): DescribeNodeResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.describeNode', $request);
 		return DescribeNodeResponse::fromJson($response);
 	}
@@ -144,14 +145,16 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function enable(ContextInterface $ctx, EnableRequest $request): void
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'DOM.enable', $request);
 	}
 
 
-	public function focus(ContextInterface $ctx, FocusRequest $request): void
+	public function focus(ContextInterface $ctx, ?FocusRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'DOM.focus', $request);
 	}
 
@@ -170,8 +173,9 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function getBoxModel(ContextInterface $ctx, GetBoxModelRequest $request): GetBoxModelResponse
+	public function getBoxModel(ContextInterface $ctx, ?GetBoxModelRequest $request = null): GetBoxModelResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.getBoxModel', $request);
 		return GetBoxModelResponse::fromJson($response);
 	}
@@ -186,8 +190,11 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function getContentQuads(ContextInterface $ctx, GetContentQuadsRequest $request): GetContentQuadsResponse
-	{
+	public function getContentQuads(
+		ContextInterface $ctx,
+		?GetContentQuadsRequest $request = null
+	): GetContentQuadsResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.getContentQuads', $request);
 		return GetContentQuadsResponse::fromJson($response);
 	}
@@ -201,8 +208,9 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function getDocument(ContextInterface $ctx, GetDocumentRequest $request): GetDocumentResponse
+	public function getDocument(ContextInterface $ctx, ?GetDocumentRequest $request = null): GetDocumentResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.getDocument', $request);
 		return GetDocumentResponse::fromJson($response);
 	}
@@ -226,8 +234,9 @@ class DOMDomain implements DOMDomainInterface
 
 	public function getFlattenedDocument(
 		ContextInterface $ctx,
-		GetFlattenedDocumentRequest $request
+		?GetFlattenedDocumentRequest $request = null
 	): GetFlattenedDocumentResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.getFlattenedDocument', $request);
 		return GetFlattenedDocumentResponse::fromJson($response);
 	}
@@ -267,8 +276,9 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function getOuterHTML(ContextInterface $ctx, GetOuterHTMLRequest $request): GetOuterHTMLResponse
+	public function getOuterHTML(ContextInterface $ctx, ?GetOuterHTMLRequest $request = null): GetOuterHTMLResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.getOuterHTML', $request);
 		return GetOuterHTMLResponse::fromJson($response);
 	}
@@ -413,15 +423,17 @@ class DOMDomain implements DOMDomainInterface
 	}
 
 
-	public function resolveNode(ContextInterface $ctx, ResolveNodeRequest $request): ResolveNodeResponse
+	public function resolveNode(ContextInterface $ctx, ?ResolveNodeRequest $request = null): ResolveNodeResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'DOM.resolveNode', $request);
 		return ResolveNodeResponse::fromJson($response);
 	}
 
 
-	public function scrollIntoViewIfNeeded(ContextInterface $ctx, ScrollIntoViewIfNeededRequest $request): void
+	public function scrollIntoViewIfNeeded(ContextInterface $ctx, ?ScrollIntoViewIfNeededRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'DOM.scrollIntoViewIfNeeded', $request);
 	}
 

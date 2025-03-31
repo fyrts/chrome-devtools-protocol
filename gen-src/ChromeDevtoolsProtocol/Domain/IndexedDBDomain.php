@@ -83,8 +83,9 @@ class IndexedDBDomain implements IndexedDBDomainInterface
 
 	public function requestDatabaseNames(
 		ContextInterface $ctx,
-		RequestDatabaseNamesRequest $request
+		?RequestDatabaseNamesRequest $request = null
 	): RequestDatabaseNamesResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'IndexedDB.requestDatabaseNames', $request);
 		return RequestDatabaseNamesResponse::fromJson($response);
 	}

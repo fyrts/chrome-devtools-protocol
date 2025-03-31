@@ -47,15 +47,19 @@ class TracingDomain implements TracingDomainInterface
 	}
 
 
-	public function requestMemoryDump(ContextInterface $ctx, RequestMemoryDumpRequest $request): RequestMemoryDumpResponse
-	{
+	public function requestMemoryDump(
+		ContextInterface $ctx,
+		?RequestMemoryDumpRequest $request = null
+	): RequestMemoryDumpResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Tracing.requestMemoryDump', $request);
 		return RequestMemoryDumpResponse::fromJson($response);
 	}
 
 
-	public function start(ContextInterface $ctx, StartRequest $request): void
+	public function start(ContextInterface $ctx, ?StartRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Tracing.start', $request);
 	}
 

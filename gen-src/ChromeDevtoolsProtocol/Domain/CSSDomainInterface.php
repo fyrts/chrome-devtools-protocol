@@ -499,7 +499,7 @@ interface CSSDomainInterface
 	 */
 	public function trackComputedStyleUpdatesForNode(
 		ContextInterface $ctx,
-		TrackComputedStyleUpdatesForNodeRequest $request
+		?TrackComputedStyleUpdatesForNodeRequest $request = null
 	): void;
 
 

@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class BackForwardCacheNotRestoredReasonTypeEnum
 {
-	public const SUPPORT_PENDING = 'SupportPending';
-	public const PAGE_SUPPORT_NEEDED = 'PageSupportNeeded';
-	public const CIRCUMSTANTIAL = 'Circumstantial';
+	const SUPPORT_PENDING = 'SupportPending';
+	const PAGE_SUPPORT_NEEDED = 'PageSupportNeeded';
+	const CIRCUMSTANTIAL = 'Circumstantial';
 }

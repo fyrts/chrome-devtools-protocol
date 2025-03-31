@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class PermissionsPolicyBlockReasonEnum
 {
-	public const HEADER = 'Header';
-	public const IFRAME_ATTRIBUTE = 'IframeAttribute';
-	public const IN_FENCED_FRAME_TREE = 'InFencedFrameTree';
-	public const IN_ISOLATED_APP = 'InIsolatedApp';
+	const HEADER = 'Header';
+	const IFRAME_ATTRIBUTE = 'IframeAttribute';
+	const IN_FENCED_FRAME_TREE = 'InFencedFrameTree';
+	const IN_ISOLATED_APP = 'InIsolatedApp';
 }

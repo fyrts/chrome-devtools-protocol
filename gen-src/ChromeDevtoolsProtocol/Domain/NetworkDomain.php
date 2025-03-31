@@ -166,8 +166,9 @@ class NetworkDomain implements NetworkDomainInterface
 	}
 
 
-	public function enable(ContextInterface $ctx, EnableRequest $request): void
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Network.enable', $request);
 	}
 
@@ -193,8 +194,9 @@ class NetworkDomain implements NetworkDomainInterface
 	}
 
 
-	public function getCookies(ContextInterface $ctx, GetCookiesRequest $request): GetCookiesResponse
+	public function getCookies(ContextInterface $ctx, ?GetCookiesRequest $request = null): GetCookiesResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Network.getCookies', $request);
 		return GetCookiesResponse::fromJson($response);
 	}
@@ -227,8 +229,9 @@ class NetworkDomain implements NetworkDomainInterface
 
 	public function getSecurityIsolationStatus(
 		ContextInterface $ctx,
-		GetSecurityIsolationStatusRequest $request
+		?GetSecurityIsolationStatusRequest $request = null
 	): GetSecurityIsolationStatusResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Network.getSecurityIsolationStatus', $request);
 		return GetSecurityIsolationStatusResponse::fromJson($response);
 	}

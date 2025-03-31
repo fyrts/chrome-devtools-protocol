@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class InsightTypeEnum
 {
-	public const GIT_HUB_RESOURCE = 'GitHubResource';
-	public const GRACE_PERIOD = 'GracePeriod';
-	public const HEURISTICS = 'Heuristics';
+	const GIT_HUB_RESOURCE = 'GitHubResource';
+	const GRACE_PERIOD = 'GracePeriod';
+	const HEURISTICS = 'Heuristics';
 }

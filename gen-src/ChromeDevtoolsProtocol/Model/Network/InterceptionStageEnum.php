@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class InterceptionStageEnum
 {
-	public const REQUEST = 'Request';
-	public const HEADERS_RECEIVED = 'HeadersReceived';
+	const REQUEST = 'Request';
+	const HEADERS_RECEIVED = 'HeadersReceived';
 }

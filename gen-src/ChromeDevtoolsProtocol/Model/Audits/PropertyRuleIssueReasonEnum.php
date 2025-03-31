@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class PropertyRuleIssueReasonEnum
 {
-	public const INVALID_SYNTAX = 'InvalidSyntax';
-	public const INVALID_INITIAL_VALUE = 'InvalidInitialValue';
-	public const INVALID_INHERITS = 'InvalidInherits';
-	public const INVALID_NAME = 'InvalidName';
+	const INVALID_SYNTAX = 'InvalidSyntax';
+	const INVALID_INITIAL_VALUE = 'InvalidInitialValue';
+	const INVALID_INHERITS = 'InvalidInherits';
+	const INVALID_NAME = 'InvalidName';
 }

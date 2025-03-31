@@ -104,8 +104,9 @@ class BrowserDomain implements BrowserDomainInterface
 	}
 
 
-	public function getHistograms(ContextInterface $ctx, GetHistogramsRequest $request): GetHistogramsResponse
+	public function getHistograms(ContextInterface $ctx, ?GetHistogramsRequest $request = null): GetHistogramsResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Browser.getHistograms', $request);
 		return GetHistogramsResponse::fromJson($response);
 	}
@@ -128,8 +129,9 @@ class BrowserDomain implements BrowserDomainInterface
 
 	public function getWindowForTarget(
 		ContextInterface $ctx,
-		GetWindowForTargetRequest $request
+		?GetWindowForTargetRequest $request = null
 	): GetWindowForTargetResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Browser.getWindowForTarget', $request);
 		return GetWindowForTargetResponse::fromJson($response);
 	}
@@ -141,14 +143,16 @@ class BrowserDomain implements BrowserDomainInterface
 	}
 
 
-	public function resetPermissions(ContextInterface $ctx, ResetPermissionsRequest $request): void
+	public function resetPermissions(ContextInterface $ctx, ?ResetPermissionsRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Browser.resetPermissions', $request);
 	}
 
 
-	public function setDockTile(ContextInterface $ctx, SetDockTileRequest $request): void
+	public function setDockTile(ContextInterface $ctx, ?SetDockTileRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Browser.setDockTile', $request);
 	}
 

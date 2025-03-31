@@ -113,8 +113,9 @@ class EmulationDomain implements EmulationDomainInterface
 	}
 
 
-	public function setAutoDarkModeOverride(ContextInterface $ctx, SetAutoDarkModeOverrideRequest $request): void
+	public function setAutoDarkModeOverride(ContextInterface $ctx, ?SetAutoDarkModeOverrideRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Emulation.setAutoDarkModeOverride', $request);
 	}
 
@@ -133,8 +134,9 @@ class EmulationDomain implements EmulationDomainInterface
 
 	public function setDefaultBackgroundColorOverride(
 		ContextInterface $ctx,
-		SetDefaultBackgroundColorOverrideRequest $request
+		?SetDefaultBackgroundColorOverrideRequest $request = null
 	): void {
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Emulation.setDefaultBackgroundColorOverride', $request);
 	}
 
@@ -175,8 +177,9 @@ class EmulationDomain implements EmulationDomainInterface
 	}
 
 
-	public function setEmulatedMedia(ContextInterface $ctx, SetEmulatedMediaRequest $request): void
+	public function setEmulatedMedia(ContextInterface $ctx, ?SetEmulatedMediaRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Emulation.setEmulatedMedia', $request);
 	}
 
@@ -193,8 +196,9 @@ class EmulationDomain implements EmulationDomainInterface
 	}
 
 
-	public function setGeolocationOverride(ContextInterface $ctx, SetGeolocationOverrideRequest $request): void
+	public function setGeolocationOverride(ContextInterface $ctx, ?SetGeolocationOverrideRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Emulation.setGeolocationOverride', $request);
 	}
 
@@ -213,8 +217,9 @@ class EmulationDomain implements EmulationDomainInterface
 	}
 
 
-	public function setLocaleOverride(ContextInterface $ctx, SetLocaleOverrideRequest $request): void
+	public function setLocaleOverride(ContextInterface $ctx, ?SetLocaleOverrideRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Emulation.setLocaleOverride', $request);
 	}
 

@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class CrossOriginEmbedderPolicyValueEnum
 {
-	public const NONE = 'None';
-	public const CREDENTIALLESS = 'Credentialless';
-	public const REQUIRE_CORP = 'RequireCorp';
+	const NONE = 'None';
+	const CREDENTIALLESS = 'Credentialless';
+	const REQUIRE_CORP = 'RequireCorp';
 }

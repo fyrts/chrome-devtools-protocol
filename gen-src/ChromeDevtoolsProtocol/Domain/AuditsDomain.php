@@ -23,8 +23,9 @@ class AuditsDomain implements AuditsDomainInterface
 	}
 
 
-	public function checkContrast(ContextInterface $ctx, CheckContrastRequest $request): void
+	public function checkContrast(ContextInterface $ctx, ?CheckContrastRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Audits.checkContrast', $request);
 	}
 

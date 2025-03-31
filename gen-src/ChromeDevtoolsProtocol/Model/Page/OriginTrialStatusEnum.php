@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class OriginTrialStatusEnum
 {
-	public const ENABLED = 'Enabled';
-	public const VALID_TOKEN_NOT_PROVIDED = 'ValidTokenNotProvided';
-	public const OS_NOT_SUPPORTED = 'OSNotSupported';
-	public const TRIAL_NOT_ALLOWED = 'TrialNotAllowed';
+	const ENABLED = 'Enabled';
+	const VALID_TOKEN_NOT_PROVIDED = 'ValidTokenNotProvided';
+	const OS_NOT_SUPPORTED = 'OSNotSupported';
+	const TRIAL_NOT_ALLOWED = 'TrialNotAllowed';
 }

@@ -60,7 +60,7 @@ interface AccessibilityDomainInterface
 	 */
 	public function getAXNodeAndAncestors(
 		ContextInterface $ctx,
-		GetAXNodeAndAncestorsRequest $request
+		?GetAXNodeAndAncestorsRequest $request = null
 	): GetAXNodeAndAncestorsResponse;
 
 
@@ -83,7 +83,7 @@ interface AccessibilityDomainInterface
 	 *
 	 * @return GetFullAXTreeResponse
 	 */
-	public function getFullAXTree(ContextInterface $ctx, GetFullAXTreeRequest $request): GetFullAXTreeResponse;
+	public function getFullAXTree(ContextInterface $ctx, ?GetFullAXTreeRequest $request = null): GetFullAXTreeResponse;
 
 
 	/**
@@ -94,7 +94,10 @@ interface AccessibilityDomainInterface
 	 *
 	 * @return GetPartialAXTreeResponse
 	 */
-	public function getPartialAXTree(ContextInterface $ctx, GetPartialAXTreeRequest $request): GetPartialAXTreeResponse;
+	public function getPartialAXTree(
+		ContextInterface $ctx,
+		?GetPartialAXTreeRequest $request = null
+	): GetPartialAXTreeResponse;
 
 
 	/**
@@ -105,7 +108,7 @@ interface AccessibilityDomainInterface
 	 *
 	 * @return GetRootAXNodeResponse
 	 */
-	public function getRootAXNode(ContextInterface $ctx, GetRootAXNodeRequest $request): GetRootAXNodeResponse;
+	public function getRootAXNode(ContextInterface $ctx, ?GetRootAXNodeRequest $request = null): GetRootAXNodeResponse;
 
 
 	/**
@@ -116,7 +119,7 @@ interface AccessibilityDomainInterface
 	 *
 	 * @return QueryAXTreeResponse
 	 */
-	public function queryAXTree(ContextInterface $ctx, QueryAXTreeRequest $request): QueryAXTreeResponse;
+	public function queryAXTree(ContextInterface $ctx, ?QueryAXTreeRequest $request = null): QueryAXTreeResponse;
 
 
 	/**

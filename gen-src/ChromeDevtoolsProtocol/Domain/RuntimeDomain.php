@@ -142,8 +142,9 @@ class RuntimeDomain implements RuntimeDomainInterface
 
 	public function globalLexicalScopeNames(
 		ContextInterface $ctx,
-		GlobalLexicalScopeNamesRequest $request
+		?GlobalLexicalScopeNamesRequest $request = null
 	): GlobalLexicalScopeNamesResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Runtime.globalLexicalScopeNames', $request);
 		return GlobalLexicalScopeNamesResponse::fromJson($response);
 	}

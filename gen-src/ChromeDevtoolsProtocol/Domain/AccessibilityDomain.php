@@ -48,8 +48,9 @@ class AccessibilityDomain implements AccessibilityDomainInterface
 
 	public function getAXNodeAndAncestors(
 		ContextInterface $ctx,
-		GetAXNodeAndAncestorsRequest $request
+		?GetAXNodeAndAncestorsRequest $request = null
 	): GetAXNodeAndAncestorsResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Accessibility.getAXNodeAndAncestors', $request);
 		return GetAXNodeAndAncestorsResponse::fromJson($response);
 	}
@@ -62,29 +63,35 @@ class AccessibilityDomain implements AccessibilityDomainInterface
 	}
 
 
-	public function getFullAXTree(ContextInterface $ctx, GetFullAXTreeRequest $request): GetFullAXTreeResponse
+	public function getFullAXTree(ContextInterface $ctx, ?GetFullAXTreeRequest $request = null): GetFullAXTreeResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Accessibility.getFullAXTree', $request);
 		return GetFullAXTreeResponse::fromJson($response);
 	}
 
 
-	public function getPartialAXTree(ContextInterface $ctx, GetPartialAXTreeRequest $request): GetPartialAXTreeResponse
-	{
+	public function getPartialAXTree(
+		ContextInterface $ctx,
+		?GetPartialAXTreeRequest $request = null
+	): GetPartialAXTreeResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Accessibility.getPartialAXTree', $request);
 		return GetPartialAXTreeResponse::fromJson($response);
 	}
 
 
-	public function getRootAXNode(ContextInterface $ctx, GetRootAXNodeRequest $request): GetRootAXNodeResponse
+	public function getRootAXNode(ContextInterface $ctx, ?GetRootAXNodeRequest $request = null): GetRootAXNodeResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Accessibility.getRootAXNode', $request);
 		return GetRootAXNodeResponse::fromJson($response);
 	}
 
 
-	public function queryAXTree(ContextInterface $ctx, QueryAXTreeRequest $request): QueryAXTreeResponse
+	public function queryAXTree(ContextInterface $ctx, ?QueryAXTreeRequest $request = null): QueryAXTreeResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Accessibility.queryAXTree', $request);
 		return QueryAXTreeResponse::fromJson($response);
 	}

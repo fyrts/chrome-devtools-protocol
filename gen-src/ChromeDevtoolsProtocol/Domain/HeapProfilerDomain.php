@@ -85,14 +85,16 @@ class HeapProfilerDomain implements HeapProfilerDomainInterface
 	}
 
 
-	public function startSampling(ContextInterface $ctx, StartSamplingRequest $request): void
+	public function startSampling(ContextInterface $ctx, ?StartSamplingRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'HeapProfiler.startSampling', $request);
 	}
 
 
-	public function startTrackingHeapObjects(ContextInterface $ctx, StartTrackingHeapObjectsRequest $request): void
+	public function startTrackingHeapObjects(ContextInterface $ctx, ?StartTrackingHeapObjectsRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'HeapProfiler.startTrackingHeapObjects', $request);
 	}
 
@@ -105,14 +107,16 @@ class HeapProfilerDomain implements HeapProfilerDomainInterface
 	}
 
 
-	public function stopTrackingHeapObjects(ContextInterface $ctx, StopTrackingHeapObjectsRequest $request): void
+	public function stopTrackingHeapObjects(ContextInterface $ctx, ?StopTrackingHeapObjectsRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'HeapProfiler.stopTrackingHeapObjects', $request);
 	}
 
 
-	public function takeHeapSnapshot(ContextInterface $ctx, TakeHeapSnapshotRequest $request): void
+	public function takeHeapSnapshot(ContextInterface $ctx, ?TakeHeapSnapshotRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'HeapProfiler.takeHeapSnapshot', $request);
 	}
 

@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Input;
  */
 final class GestureSourceTypeEnum
 {
-	public const DEFAULT = 'default';
-	public const TOUCH = 'touch';
-	public const MOUSE = 'mouse';
+	const DEFAULT = 'default';
+	const TOUCH = 'touch';
+	const MOUSE = 'mouse';
 }

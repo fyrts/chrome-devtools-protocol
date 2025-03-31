@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\ServiceWorker;
  */
 final class ServiceWorkerVersionRunningStatusEnum
 {
-	public const STOPPED = 'stopped';
-	public const STARTING = 'starting';
-	public const RUNNING = 'running';
-	public const STOPPING = 'stopping';
+	const STOPPED = 'stopped';
+	const STARTING = 'starting';
+	const RUNNING = 'running';
+	const STOPPING = 'stopping';
 }

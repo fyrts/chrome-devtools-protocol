@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Tracing;
  */
 final class StreamFormatEnum
 {
-	public const JSON = 'json';
-	public const PROTO = 'proto';
+	const JSON = 'json';
+	const PROTO = 'proto';
 }

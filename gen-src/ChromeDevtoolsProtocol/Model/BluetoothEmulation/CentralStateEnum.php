@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\BluetoothEmulation;
  */
 final class CentralStateEnum
 {
-	public const ABSENT = 'absent';
-	public const POWERED_OFF = 'powered-off';
-	public const POWERED_ON = 'powered-on';
+	const ABSENT = 'absent';
+	const POWERED_OFF = 'powered-off';
+	const POWERED_ON = 'powered-on';
 }

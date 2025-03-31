@@ -46,8 +46,11 @@ class CacheStorageDomain implements CacheStorageDomainInterface
 	}
 
 
-	public function requestCacheNames(ContextInterface $ctx, RequestCacheNamesRequest $request): RequestCacheNamesResponse
-	{
+	public function requestCacheNames(
+		ContextInterface $ctx,
+		?RequestCacheNamesRequest $request = null
+	): RequestCacheNamesResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'CacheStorage.requestCacheNames', $request);
 		return RequestCacheNamesResponse::fromJson($response);
 	}

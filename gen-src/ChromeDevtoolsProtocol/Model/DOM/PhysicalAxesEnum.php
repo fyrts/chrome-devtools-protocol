@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\DOM;
  */
 final class PhysicalAxesEnum
 {
-	public const HORIZONTAL = 'Horizontal';
-	public const VERTICAL = 'Vertical';
-	public const BOTH = 'Both';
+	const HORIZONTAL = 'Horizontal';
+	const VERTICAL = 'Vertical';
+	const BOTH = 'Both';
 }

@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Security;
  */
 final class CertificateErrorActionEnum
 {
-	public const CONTINUE = 'continue';
-	public const CANCEL = 'cancel';
+	const CONTINUE = 'continue';
+	const CANCEL = 'cancel';
 }

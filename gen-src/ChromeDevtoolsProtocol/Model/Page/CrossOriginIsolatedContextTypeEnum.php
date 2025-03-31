@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class CrossOriginIsolatedContextTypeEnum
 {
-	public const ISOLATED = 'Isolated';
-	public const NOT_ISOLATED = 'NotIsolated';
-	public const NOT_ISOLATED_FEATURE_DISABLED = 'NotIsolatedFeatureDisabled';
+	const ISOLATED = 'Isolated';
+	const NOT_ISOLATED = 'NotIsolated';
+	const NOT_ISOLATED_FEATURE_DISABLED = 'NotIsolatedFeatureDisabled';
 }

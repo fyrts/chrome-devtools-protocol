@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class HeavyAdReasonEnum
 {
-	public const NETWORK_TOTAL_LIMIT = 'NetworkTotalLimit';
-	public const CPU_TOTAL_LIMIT = 'CpuTotalLimit';
-	public const CPU_PEAK_LIMIT = 'CpuPeakLimit';
+	const NETWORK_TOTAL_LIMIT = 'NetworkTotalLimit';
+	const CPU_TOTAL_LIMIT = 'CpuTotalLimit';
+	const CPU_PEAK_LIMIT = 'CpuPeakLimit';
 }

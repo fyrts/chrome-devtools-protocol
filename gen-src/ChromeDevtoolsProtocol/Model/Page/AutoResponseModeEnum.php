@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class AutoResponseModeEnum
 {
-	public const NONE = 'none';
-	public const AUTO_ACCEPT = 'autoAccept';
-	public const AUTO_REJECT = 'autoReject';
-	public const AUTO_OPT_OUT = 'autoOptOut';
+	const NONE = 'none';
+	const AUTO_ACCEPT = 'autoAccept';
+	const AUTO_REJECT = 'autoReject';
+	const AUTO_OPT_OUT = 'autoOptOut';
 }

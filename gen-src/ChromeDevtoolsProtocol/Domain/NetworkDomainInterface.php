@@ -203,7 +203,7 @@ interface NetworkDomainInterface
 	 *
 	 * @return void
 	 */
-	public function enable(ContextInterface $ctx, EnableRequest $request): void;
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void;
 
 
 	/**
@@ -246,7 +246,7 @@ interface NetworkDomainInterface
 	 *
 	 * @return GetCookiesResponse
 	 */
-	public function getCookies(ContextInterface $ctx, GetCookiesRequest $request): GetCookiesResponse;
+	public function getCookies(ContextInterface $ctx, ?GetCookiesRequest $request = null): GetCookiesResponse;
 
 
 	/**
@@ -298,7 +298,7 @@ interface NetworkDomainInterface
 	 */
 	public function getSecurityIsolationStatus(
 		ContextInterface $ctx,
-		GetSecurityIsolationStatusRequest $request
+		?GetSecurityIsolationStatusRequest $request = null
 	): GetSecurityIsolationStatusResponse;
 
 

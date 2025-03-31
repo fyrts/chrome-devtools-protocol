@@ -25,7 +25,7 @@ interface HeadlessExperimentalDomainInterface
 	 *
 	 * @return BeginFrameResponse
 	 */
-	public function beginFrame(ContextInterface $ctx, BeginFrameRequest $request): BeginFrameResponse;
+	public function beginFrame(ContextInterface $ctx, ?BeginFrameRequest $request = null): BeginFrameResponse;
 
 
 	/**

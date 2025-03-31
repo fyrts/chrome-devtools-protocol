@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Debugger;
  */
 final class ScriptLanguageEnum
 {
-	public const JAVA_SCRIPT = 'JavaScript';
-	public const WEB_ASSEMBLY = 'WebAssembly';
+	const JAVA_SCRIPT = 'JavaScript';
+	const WEB_ASSEMBLY = 'WebAssembly';
 }

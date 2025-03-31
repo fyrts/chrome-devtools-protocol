@@ -11,12 +11,12 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class AlternateProtocolUsageEnum
 {
-	public const ALTERNATIVE_JOB_WON_WITHOUT_RACE = 'alternativeJobWonWithoutRace';
-	public const ALTERNATIVE_JOB_WON_RACE = 'alternativeJobWonRace';
-	public const MAIN_JOB_WON_RACE = 'mainJobWonRace';
-	public const MAPPING_MISSING = 'mappingMissing';
-	public const BROKEN = 'broken';
-	public const DNS_ALPN_H3_JOB_WON_WITHOUT_RACE = 'dnsAlpnH3JobWonWithoutRace';
-	public const DNS_ALPN_H3_JOB_WON_RACE = 'dnsAlpnH3JobWonRace';
-	public const UNSPECIFIED_REASON = 'unspecifiedReason';
+	const ALTERNATIVE_JOB_WON_WITHOUT_RACE = 'alternativeJobWonWithoutRace';
+	const ALTERNATIVE_JOB_WON_RACE = 'alternativeJobWonRace';
+	const MAIN_JOB_WON_RACE = 'mainJobWonRace';
+	const MAPPING_MISSING = 'mappingMissing';
+	const BROKEN = 'broken';
+	const DNS_ALPN_H3_JOB_WON_WITHOUT_RACE = 'dnsAlpnH3JobWonWithoutRace';
+	const DNS_ALPN_H3_JOB_WON_RACE = 'dnsAlpnH3JobWonRace';
+	const UNSPECIFIED_REASON = 'unspecifiedReason';
 }

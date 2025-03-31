@@ -67,7 +67,10 @@ interface CacheStorageDomainInterface
 	 *
 	 * @return RequestCacheNamesResponse
 	 */
-	public function requestCacheNames(ContextInterface $ctx, RequestCacheNamesRequest $request): RequestCacheNamesResponse;
+	public function requestCacheNames(
+		ContextInterface $ctx,
+		?RequestCacheNamesRequest $request = null
+	): RequestCacheNamesResponse;
 
 
 	/**

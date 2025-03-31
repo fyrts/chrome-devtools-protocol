@@ -11,9 +11,9 @@ namespace ChromeDevtoolsProtocol\Model\Overlay;
  */
 final class InspectModeEnum
 {
-	public const SEARCH_FOR_NODE = 'searchForNode';
-	public const SEARCH_FOR_U_A_SHADOW_D_O_M = 'searchForUAShadowDOM';
-	public const CAPTURE_AREA_SCREENSHOT = 'captureAreaScreenshot';
-	public const SHOW_DISTANCES = 'showDistances';
-	public const NONE = 'none';
+	const SEARCH_FOR_NODE = 'searchForNode';
+	const SEARCH_FOR_U_A_SHADOW_D_O_M = 'searchForUAShadowDOM';
+	const CAPTURE_AREA_SCREENSHOT = 'captureAreaScreenshot';
+	const SHOW_DISTANCES = 'showDistances';
+	const NONE = 'none';
 }

@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\FedCm;
  */
 final class DialogButtonEnum
 {
-	public const CONFIRM_IDP_LOGIN_CONTINUE = 'ConfirmIdpLoginContinue';
-	public const ERROR_GOT_IT = 'ErrorGotIt';
-	public const ERROR_MORE_DETAILS = 'ErrorMoreDetails';
+	const CONFIRM_IDP_LOGIN_CONTINUE = 'ConfirmIdpLoginContinue';
+	const ERROR_GOT_IT = 'ErrorGotIt';
+	const ERROR_MORE_DETAILS = 'ErrorMoreDetails';
 }

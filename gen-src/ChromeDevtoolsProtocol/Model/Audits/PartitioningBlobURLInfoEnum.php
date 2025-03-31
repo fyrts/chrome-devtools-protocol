@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class PartitioningBlobURLInfoEnum
 {
-	public const BLOCKED_CROSS_PARTITION_FETCHING = 'BlockedCrossPartitionFetching';
-	public const ENFORCE_NOOPENER_FOR_NAVIGATION = 'EnforceNoopenerForNavigation';
+	const BLOCKED_CROSS_PARTITION_FETCHING = 'BlockedCrossPartitionFetching';
+	const ENFORCE_NOOPENER_FOR_NAVIGATION = 'EnforceNoopenerForNavigation';
 }

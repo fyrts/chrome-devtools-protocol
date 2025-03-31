@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\FedCm;
  */
 final class DialogTypeEnum
 {
-	public const ACCOUNT_CHOOSER = 'AccountChooser';
-	public const AUTO_REAUTHN = 'AutoReauthn';
-	public const CONFIRM_IDP_LOGIN = 'ConfirmIdpLogin';
-	public const ERROR = 'Error';
+	const ACCOUNT_CHOOSER = 'AccountChooser';
+	const AUTO_REAUTHN = 'AutoReauthn';
+	const CONFIRM_IDP_LOGIN = 'ConfirmIdpLogin';
+	const ERROR = 'Error';
 }

@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\FedCm;
  */
 final class LoginStateEnum
 {
-	public const SIGN_IN = 'SignIn';
-	public const SIGN_UP = 'SignUp';
+	const SIGN_IN = 'SignIn';
+	const SIGN_UP = 'SignUp';
 }

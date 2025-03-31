@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Tracing;
  */
 final class StreamCompressionEnum
 {
-	public const NONE = 'none';
-	public const GZIP = 'gzip';
+	const NONE = 'none';
+	const GZIP = 'gzip';
 }

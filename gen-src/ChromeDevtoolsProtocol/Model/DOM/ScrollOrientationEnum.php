@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\DOM;
  */
 final class ScrollOrientationEnum
 {
-	public const HORIZONTAL = 'horizontal';
-	public const VERTICAL = 'vertical';
+	const HORIZONTAL = 'horizontal';
+	const VERTICAL = 'vertical';
 }

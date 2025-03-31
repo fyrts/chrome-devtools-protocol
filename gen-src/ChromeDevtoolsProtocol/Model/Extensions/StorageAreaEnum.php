@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Extensions;
  */
 final class StorageAreaEnum
 {
-	public const SESSION = 'session';
-	public const LOCAL = 'local';
-	public const SYNC = 'sync';
-	public const MANAGED = 'managed';
+	const SESSION = 'session';
+	const LOCAL = 'local';
+	const SYNC = 'sync';
+	const MANAGED = 'managed';
 }

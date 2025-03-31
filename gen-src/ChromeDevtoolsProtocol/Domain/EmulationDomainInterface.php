@@ -142,7 +142,7 @@ interface EmulationDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setAutoDarkModeOverride(ContextInterface $ctx, SetAutoDarkModeOverrideRequest $request): void;
+	public function setAutoDarkModeOverride(ContextInterface $ctx, ?SetAutoDarkModeOverrideRequest $request = null): void;
 
 
 	/**
@@ -177,7 +177,7 @@ interface EmulationDomainInterface
 	 */
 	public function setDefaultBackgroundColorOverride(
 		ContextInterface $ctx,
-		SetDefaultBackgroundColorOverrideRequest $request
+		?SetDefaultBackgroundColorOverrideRequest $request = null
 	): void;
 
 
@@ -255,7 +255,7 @@ interface EmulationDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setEmulatedMedia(ContextInterface $ctx, SetEmulatedMediaRequest $request): void;
+	public function setEmulatedMedia(ContextInterface $ctx, ?SetEmulatedMediaRequest $request = null): void;
 
 
 	/**
@@ -288,7 +288,7 @@ interface EmulationDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setGeolocationOverride(ContextInterface $ctx, SetGeolocationOverrideRequest $request): void;
+	public function setGeolocationOverride(ContextInterface $ctx, ?SetGeolocationOverrideRequest $request = null): void;
 
 
 	/**
@@ -324,7 +324,7 @@ interface EmulationDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setLocaleOverride(ContextInterface $ctx, SetLocaleOverrideRequest $request): void;
+	public function setLocaleOverride(ContextInterface $ctx, ?SetLocaleOverrideRequest $request = null): void;
 
 
 	/**

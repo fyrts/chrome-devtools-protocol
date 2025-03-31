@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class AdFrameTypeEnum
 {
-	public const NONE = 'none';
-	public const CHILD = 'child';
-	public const ROOT = 'root';
+	const NONE = 'none';
+	const CHILD = 'child';
+	const ROOT = 'root';
 }

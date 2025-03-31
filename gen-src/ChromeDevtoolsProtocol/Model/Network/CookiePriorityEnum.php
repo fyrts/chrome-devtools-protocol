@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class CookiePriorityEnum
 {
-	public const LOW = 'Low';
-	public const MEDIUM = 'Medium';
-	public const HIGH = 'High';
+	const LOW = 'Low';
+	const MEDIUM = 'Medium';
+	const HIGH = 'High';
 }

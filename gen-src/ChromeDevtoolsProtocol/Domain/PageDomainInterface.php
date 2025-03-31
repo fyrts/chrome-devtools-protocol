@@ -160,7 +160,10 @@ interface PageDomainInterface
 	 *
 	 * @return CaptureScreenshotResponse
 	 */
-	public function captureScreenshot(ContextInterface $ctx, CaptureScreenshotRequest $request): CaptureScreenshotResponse;
+	public function captureScreenshot(
+		ContextInterface $ctx,
+		?CaptureScreenshotRequest $request = null
+	): CaptureScreenshotResponse;
 
 
 	/**
@@ -171,7 +174,10 @@ interface PageDomainInterface
 	 *
 	 * @return CaptureSnapshotResponse
 	 */
-	public function captureSnapshot(ContextInterface $ctx, CaptureSnapshotRequest $request): CaptureSnapshotResponse;
+	public function captureSnapshot(
+		ContextInterface $ctx,
+		?CaptureSnapshotRequest $request = null
+	): CaptureSnapshotResponse;
 
 
 	/**
@@ -277,7 +283,7 @@ interface PageDomainInterface
 	 *
 	 * @return void
 	 */
-	public function enable(ContextInterface $ctx, EnableRequest $request): void;
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void;
 
 
 	/**
@@ -320,7 +326,7 @@ interface PageDomainInterface
 	 *
 	 * @return GetAppManifestResponse
 	 */
-	public function getAppManifest(ContextInterface $ctx, GetAppManifestRequest $request): GetAppManifestResponse;
+	public function getAppManifest(ContextInterface $ctx, ?GetAppManifestRequest $request = null): GetAppManifestResponse;
 
 
 	/**
@@ -463,7 +469,7 @@ interface PageDomainInterface
 	 *
 	 * @return PrintToPDFResponse
 	 */
-	public function printToPDF(ContextInterface $ctx, PrintToPDFRequest $request): PrintToPDFResponse;
+	public function printToPDF(ContextInterface $ctx, ?PrintToPDFRequest $request = null): PrintToPDFResponse;
 
 
 	/**
@@ -485,7 +491,7 @@ interface PageDomainInterface
 	 *
 	 * @return void
 	 */
-	public function reload(ContextInterface $ctx, ReloadRequest $request): void;
+	public function reload(ContextInterface $ctx, ?ReloadRequest $request = null): void;
 
 
 	/**
@@ -641,7 +647,7 @@ interface PageDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setGeolocationOverride(ContextInterface $ctx, SetGeolocationOverrideRequest $request): void;
+	public function setGeolocationOverride(ContextInterface $ctx, ?SetGeolocationOverrideRequest $request = null): void;
 
 
 	/**
@@ -732,7 +738,7 @@ interface PageDomainInterface
 	 *
 	 * @return void
 	 */
-	public function startScreencast(ContextInterface $ctx, StartScreencastRequest $request): void;
+	public function startScreencast(ContextInterface $ctx, ?StartScreencastRequest $request = null): void;
 
 
 	/**

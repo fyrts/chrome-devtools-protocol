@@ -61,7 +61,10 @@ interface TracingDomainInterface
 	 *
 	 * @return RequestMemoryDumpResponse
 	 */
-	public function requestMemoryDump(ContextInterface $ctx, RequestMemoryDumpRequest $request): RequestMemoryDumpResponse;
+	public function requestMemoryDump(
+		ContextInterface $ctx,
+		?RequestMemoryDumpRequest $request = null
+	): RequestMemoryDumpResponse;
 
 
 	/**
@@ -72,7 +75,7 @@ interface TracingDomainInterface
 	 *
 	 * @return void
 	 */
-	public function start(ContextInterface $ctx, StartRequest $request): void;
+	public function start(ContextInterface $ctx, ?StartRequest $request = null): void;
 
 
 	/**

@@ -195,7 +195,10 @@ interface OverlayDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setPausedInDebuggerMessage(ContextInterface $ctx, SetPausedInDebuggerMessageRequest $request): void;
+	public function setPausedInDebuggerMessage(
+		ContextInterface $ctx,
+		?SetPausedInDebuggerMessageRequest $request = null
+	): void;
 
 
 	/**
@@ -275,7 +278,7 @@ interface OverlayDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setShowHinge(ContextInterface $ctx, SetShowHingeRequest $request): void;
+	public function setShowHinge(ContextInterface $ctx, ?SetShowHingeRequest $request = null): void;
 
 
 	/**
@@ -374,7 +377,10 @@ interface OverlayDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setShowWindowControlsOverlay(ContextInterface $ctx, SetShowWindowControlsOverlayRequest $request): void;
+	public function setShowWindowControlsOverlay(
+		ContextInterface $ctx,
+		?SetShowWindowControlsOverlayRequest $request = null
+	): void;
 
 
 	/**

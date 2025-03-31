@@ -11,15 +11,15 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class CookieExemptionReasonEnum
 {
-	public const NONE = 'None';
-	public const USER_SETTING = 'UserSetting';
-	public const TPCD_METADATA = 'TPCDMetadata';
-	public const TPCD_DEPRECATION_TRIAL = 'TPCDDeprecationTrial';
-	public const TOP_LEVEL_T_P_C_D_DEPRECATION_TRIAL = 'TopLevelTPCDDeprecationTrial';
-	public const TPCD_HEURISTICS = 'TPCDHeuristics';
-	public const ENTERPRISE_POLICY = 'EnterprisePolicy';
-	public const STORAGE_ACCESS = 'StorageAccess';
-	public const TOP_LEVEL_STORAGE_ACCESS = 'TopLevelStorageAccess';
-	public const SCHEME = 'Scheme';
-	public const SAME_SITE_NONE_COOKIES_IN_SANDBOX = 'SameSiteNoneCookiesInSandbox';
+	const NONE = 'None';
+	const USER_SETTING = 'UserSetting';
+	const TPCD_METADATA = 'TPCDMetadata';
+	const TPCD_DEPRECATION_TRIAL = 'TPCDDeprecationTrial';
+	const TOP_LEVEL_T_P_C_D_DEPRECATION_TRIAL = 'TopLevelTPCDDeprecationTrial';
+	const TPCD_HEURISTICS = 'TPCDHeuristics';
+	const ENTERPRISE_POLICY = 'EnterprisePolicy';
+	const STORAGE_ACCESS = 'StorageAccess';
+	const TOP_LEVEL_STORAGE_ACCESS = 'TopLevelStorageAccess';
+	const SCHEME = 'Scheme';
+	const SAME_SITE_NONE_COOKIES_IN_SANDBOX = 'SameSiteNoneCookiesInSandbox';
 }

@@ -348,8 +348,9 @@ class CSSDomain implements CSSDomainInterface
 
 	public function trackComputedStyleUpdatesForNode(
 		ContextInterface $ctx,
-		TrackComputedStyleUpdatesForNodeRequest $request
+		?TrackComputedStyleUpdatesForNodeRequest $request = null
 	): void {
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'CSS.trackComputedStyleUpdatesForNode', $request);
 	}
 

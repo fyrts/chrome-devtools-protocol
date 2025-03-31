@@ -189,7 +189,7 @@ interface RuntimeDomainInterface
 	 */
 	public function globalLexicalScopeNames(
 		ContextInterface $ctx,
-		GlobalLexicalScopeNamesRequest $request
+		?GlobalLexicalScopeNamesRequest $request = null
 	): GlobalLexicalScopeNamesResponse;
 
 

@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Tracing;
  */
 final class MemoryDumpLevelOfDetailEnum
 {
-	public const BACKGROUND = 'background';
-	public const LIGHT = 'light';
-	public const DETAILED = 'detailed';
+	const BACKGROUND = 'background';
+	const LIGHT = 'light';
+	const DETAILED = 'detailed';
 }

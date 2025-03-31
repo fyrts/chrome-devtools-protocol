@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class DialogTypeEnum
 {
-	public const ALERT = 'alert';
-	public const CONFIRM = 'confirm';
-	public const PROMPT = 'prompt';
-	public const BEFOREUNLOAD = 'beforeunload';
+	const ALERT = 'alert';
+	const CONFIRM = 'confirm';
+	const PROMPT = 'prompt';
+	const BEFOREUNLOAD = 'beforeunload';
 }

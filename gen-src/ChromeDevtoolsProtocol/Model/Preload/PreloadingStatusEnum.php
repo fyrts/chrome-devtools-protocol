@@ -11,10 +11,10 @@ namespace ChromeDevtoolsProtocol\Model\Preload;
  */
 final class PreloadingStatusEnum
 {
-	public const PENDING = 'Pending';
-	public const RUNNING = 'Running';
-	public const READY = 'Ready';
-	public const SUCCESS = 'Success';
-	public const FAILURE = 'Failure';
-	public const NOT_SUPPORTED = 'NotSupported';
+	const PENDING = 'Pending';
+	const RUNNING = 'Running';
+	const READY = 'Ready';
+	const SUCCESS = 'Success';
+	const FAILURE = 'Failure';
+	const NOT_SUPPORTED = 'NotSupported';
 }

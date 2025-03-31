@@ -19,8 +19,9 @@ class HeadlessExperimentalDomain implements HeadlessExperimentalDomainInterface
 	}
 
 
-	public function beginFrame(ContextInterface $ctx, BeginFrameRequest $request): BeginFrameResponse
+	public function beginFrame(ContextInterface $ctx, ?BeginFrameRequest $request = null): BeginFrameResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'HeadlessExperimental.beginFrame', $request);
 		return BeginFrameResponse::fromJson($response);
 	}

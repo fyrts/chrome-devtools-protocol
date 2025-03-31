@@ -89,7 +89,7 @@ interface WebAuthnDomainInterface
 	 *
 	 * @return void
 	 */
-	public function enable(ContextInterface $ctx, EnableRequest $request): void;
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void;
 
 
 	/**

@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\BluetoothEmulation;
  */
 final class GATTOperationTypeEnum
 {
-	public const CONNECTION = 'connection';
-	public const DISCOVERY = 'discovery';
+	const CONNECTION = 'connection';
+	const DISCOVERY = 'discovery';
 }

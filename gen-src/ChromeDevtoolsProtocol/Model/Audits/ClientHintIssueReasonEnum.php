@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class ClientHintIssueReasonEnum
 {
-	public const META_TAG_ALLOW_LIST_INVALID_ORIGIN = 'MetaTagAllowListInvalidOrigin';
-	public const META_TAG_MODIFIED_H_T_M_L = 'MetaTagModifiedHTML';
+	const META_TAG_ALLOW_LIST_INVALID_ORIGIN = 'MetaTagAllowListInvalidOrigin';
+	const META_TAG_MODIFIED_H_T_M_L = 'MetaTagModifiedHTML';
 }

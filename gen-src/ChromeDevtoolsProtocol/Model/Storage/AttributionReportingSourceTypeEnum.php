@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class AttributionReportingSourceTypeEnum
 {
-	public const NAVIGATION = 'navigation';
-	public const EVENT = 'event';
+	const NAVIGATION = 'navigation';
+	const EVENT = 'event';
 }

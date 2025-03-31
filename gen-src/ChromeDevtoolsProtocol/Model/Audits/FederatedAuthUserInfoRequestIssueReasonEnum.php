@@ -11,13 +11,13 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class FederatedAuthUserInfoRequestIssueReasonEnum
 {
-	public const NOT_SAME_ORIGIN = 'NotSameOrigin';
-	public const NOT_IFRAME = 'NotIframe';
-	public const NOT_POTENTIALLY_TRUSTWORTHY = 'NotPotentiallyTrustworthy';
-	public const NO_API_PERMISSION = 'NoApiPermission';
-	public const NOT_SIGNED_IN_WITH_IDP = 'NotSignedInWithIdp';
-	public const NO_ACCOUNT_SHARING_PERMISSION = 'NoAccountSharingPermission';
-	public const INVALID_CONFIG_OR_WELL_KNOWN = 'InvalidConfigOrWellKnown';
-	public const INVALID_ACCOUNTS_RESPONSE = 'InvalidAccountsResponse';
-	public const NO_RETURNING_USER_FROM_FETCHED_ACCOUNTS = 'NoReturningUserFromFetchedAccounts';
+	const NOT_SAME_ORIGIN = 'NotSameOrigin';
+	const NOT_IFRAME = 'NotIframe';
+	const NOT_POTENTIALLY_TRUSTWORTHY = 'NotPotentiallyTrustworthy';
+	const NO_API_PERMISSION = 'NoApiPermission';
+	const NOT_SIGNED_IN_WITH_IDP = 'NotSignedInWithIdp';
+	const NO_ACCOUNT_SHARING_PERMISSION = 'NoAccountSharingPermission';
+	const INVALID_CONFIG_OR_WELL_KNOWN = 'InvalidConfigOrWellKnown';
+	const INVALID_ACCOUNTS_RESPONSE = 'InvalidAccountsResponse';
+	const NO_RETURNING_USER_FROM_FETCHED_ACCOUNTS = 'NoReturningUserFromFetchedAccounts';
 }

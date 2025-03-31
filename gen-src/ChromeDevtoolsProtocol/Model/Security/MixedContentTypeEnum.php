@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Security;
  */
 final class MixedContentTypeEnum
 {
-	public const BLOCKABLE = 'blockable';
-	public const OPTIONALLY_BLOCKABLE = 'optionally-blockable';
-	public const NONE = 'none';
+	const BLOCKABLE = 'blockable';
+	const OPTIONALLY_BLOCKABLE = 'optionally-blockable';
+	const NONE = 'none';
 }

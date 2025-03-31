@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class AttributionReportingTriggerDataMatchingEnum
 {
-	public const EXACT = 'exact';
-	public const MODULUS = 'modulus';
+	const EXACT = 'exact';
+	const MODULUS = 'modulus';
 }

@@ -11,9 +11,9 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class InterestGroupAuctionFetchTypeEnum
 {
-	public const BIDDER_JS = 'bidderJs';
-	public const BIDDER_WASM = 'bidderWasm';
-	public const SELLER_JS = 'sellerJs';
-	public const BIDDER_TRUSTED_SIGNALS = 'bidderTrustedSignals';
-	public const SELLER_TRUSTED_SIGNALS = 'sellerTrustedSignals';
+	const BIDDER_JS = 'bidderJs';
+	const BIDDER_WASM = 'bidderWasm';
+	const SELLER_JS = 'sellerJs';
+	const BIDDER_TRUSTED_SIGNALS = 'bidderTrustedSignals';
+	const SELLER_TRUSTED_SIGNALS = 'sellerTrustedSignals';
 }

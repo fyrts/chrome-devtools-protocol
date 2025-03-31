@@ -138,15 +138,21 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function captureScreenshot(ContextInterface $ctx, CaptureScreenshotRequest $request): CaptureScreenshotResponse
-	{
+	public function captureScreenshot(
+		ContextInterface $ctx,
+		?CaptureScreenshotRequest $request = null
+	): CaptureScreenshotResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Page.captureScreenshot', $request);
 		return CaptureScreenshotResponse::fromJson($response);
 	}
 
 
-	public function captureSnapshot(ContextInterface $ctx, CaptureSnapshotRequest $request): CaptureSnapshotResponse
-	{
+	public function captureSnapshot(
+		ContextInterface $ctx,
+		?CaptureSnapshotRequest $request = null
+	): CaptureSnapshotResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Page.captureSnapshot', $request);
 		return CaptureSnapshotResponse::fromJson($response);
 	}
@@ -216,8 +222,9 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function enable(ContextInterface $ctx, EnableRequest $request): void
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Page.enable', $request);
 	}
 
@@ -243,8 +250,9 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function getAppManifest(ContextInterface $ctx, GetAppManifestRequest $request): GetAppManifestResponse
+	public function getAppManifest(ContextInterface $ctx, ?GetAppManifestRequest $request = null): GetAppManifestResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Page.getAppManifest', $request);
 		return GetAppManifestResponse::fromJson($response);
 	}
@@ -342,8 +350,9 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function printToPDF(ContextInterface $ctx, PrintToPDFRequest $request): PrintToPDFResponse
+	public function printToPDF(ContextInterface $ctx, ?PrintToPDFRequest $request = null): PrintToPDFResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Page.printToPDF', $request);
 		return PrintToPDFResponse::fromJson($response);
 	}
@@ -355,8 +364,9 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function reload(ContextInterface $ctx, ReloadRequest $request): void
+	public function reload(ContextInterface $ctx, ?ReloadRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Page.reload', $request);
 	}
 
@@ -443,8 +453,9 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function setGeolocationOverride(ContextInterface $ctx, SetGeolocationOverrideRequest $request): void
+	public function setGeolocationOverride(ContextInterface $ctx, ?SetGeolocationOverrideRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Page.setGeolocationOverride', $request);
 	}
 
@@ -493,8 +504,9 @@ class PageDomain implements PageDomainInterface
 	}
 
 
-	public function startScreencast(ContextInterface $ctx, StartScreencastRequest $request): void
+	public function startScreencast(ContextInterface $ctx, ?StartScreencastRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Page.startScreencast', $request);
 	}
 

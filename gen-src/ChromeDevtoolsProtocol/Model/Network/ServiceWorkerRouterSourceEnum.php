@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class ServiceWorkerRouterSourceEnum
 {
-	public const NETWORK = 'network';
-	public const CACHE = 'cache';
-	public const FETCH_EVENT = 'fetch-event';
-	public const RACE_NETWORK_AND_FETCH_HANDLER = 'race-network-and-fetch-handler';
+	const NETWORK = 'network';
+	const CACHE = 'cache';
+	const FETCH_EVENT = 'fetch-event';
+	const RACE_NETWORK_AND_FETCH_HANDLER = 'race-network-and-fetch-handler';
 }

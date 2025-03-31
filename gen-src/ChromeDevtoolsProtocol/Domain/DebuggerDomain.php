@@ -90,8 +90,9 @@ class DebuggerDomain implements DebuggerDomainInterface
 	}
 
 
-	public function enable(ContextInterface $ctx, EnableRequest $request): EnableResponse
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): EnableResponse
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Debugger.enable', $request);
 		return EnableResponse::fromJson($response);
 	}
@@ -171,8 +172,9 @@ class DebuggerDomain implements DebuggerDomainInterface
 	}
 
 
-	public function resume(ContextInterface $ctx, ResumeRequest $request): void
+	public function resume(ContextInterface $ctx, ?ResumeRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Debugger.resume', $request);
 	}
 
@@ -279,8 +281,9 @@ class DebuggerDomain implements DebuggerDomainInterface
 	}
 
 
-	public function stepInto(ContextInterface $ctx, StepIntoRequest $request): void
+	public function stepInto(ContextInterface $ctx, ?StepIntoRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Debugger.stepInto', $request);
 	}
 
@@ -292,8 +295,9 @@ class DebuggerDomain implements DebuggerDomainInterface
 	}
 
 
-	public function stepOver(ContextInterface $ctx, StepOverRequest $request): void
+	public function stepOver(ContextInterface $ctx, ?StepOverRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Debugger.stepOver', $request);
 	}
 

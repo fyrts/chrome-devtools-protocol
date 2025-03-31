@@ -11,10 +11,10 @@ namespace ChromeDevtoolsProtocol\Model\Security;
  */
 final class SecurityStateEnum
 {
-	public const UNKNOWN = 'unknown';
-	public const NEUTRAL = 'neutral';
-	public const INSECURE = 'insecure';
-	public const SECURE = 'secure';
-	public const INFO = 'info';
-	public const INSECURE_BROKEN = 'insecure-broken';
+	const UNKNOWN = 'unknown';
+	const NEUTRAL = 'neutral';
+	const INSECURE = 'insecure';
+	const SECURE = 'secure';
+	const INFO = 'info';
+	const INSECURE_BROKEN = 'insecure-broken';
 }

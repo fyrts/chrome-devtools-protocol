@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Autofill;
  */
 final class FillingStrategyEnum
 {
-	public const AUTOCOMPLETE_ATTRIBUTE = 'autocompleteAttribute';
-	public const AUTOFILL_INFERRED = 'autofillInferred';
+	const AUTOCOMPLETE_ATTRIBUTE = 'autocompleteAttribute';
+	const AUTOFILL_INFERRED = 'autofillInferred';
 }

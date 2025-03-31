@@ -11,10 +11,10 @@ namespace ChromeDevtoolsProtocol\Model\CacheStorage;
  */
 final class CachedResponseTypeEnum
 {
-	public const BASIC = 'basic';
-	public const CORS = 'cors';
-	public const DEFAULT = 'default';
-	public const ERROR = 'error';
-	public const OPAQUE_RESPONSE = 'opaqueResponse';
-	public const OPAQUE_REDIRECT = 'opaqueRedirect';
+	const BASIC = 'basic';
+	const CORS = 'cors';
+	const DEFAULT = 'default';
+	const ERROR = 'error';
+	const OPAQUE_RESPONSE = 'opaqueResponse';
+	const OPAQUE_REDIRECT = 'opaqueRedirect';
 }

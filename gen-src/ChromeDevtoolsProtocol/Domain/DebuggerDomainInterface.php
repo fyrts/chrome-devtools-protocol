@@ -107,7 +107,7 @@ interface DebuggerDomainInterface
 	 *
 	 * @return EnableResponse
 	 */
-	public function enable(ContextInterface $ctx, EnableRequest $request): EnableResponse;
+	public function enable(ContextInterface $ctx, ?EnableRequest $request = null): EnableResponse;
 
 
 	/**
@@ -236,7 +236,7 @@ interface DebuggerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function resume(ContextInterface $ctx, ResumeRequest $request): void;
+	public function resume(ContextInterface $ctx, ?ResumeRequest $request = null): void;
 
 
 	/**
@@ -421,7 +421,7 @@ interface DebuggerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function stepInto(ContextInterface $ctx, StepIntoRequest $request): void;
+	public function stepInto(ContextInterface $ctx, ?StepIntoRequest $request = null): void;
 
 
 	/**
@@ -442,7 +442,7 @@ interface DebuggerDomainInterface
 	 *
 	 * @return void
 	 */
-	public function stepOver(ContextInterface $ctx, StepOverRequest $request): void;
+	public function stepOver(ContextInterface $ctx, ?StepOverRequest $request = null): void;
 
 
 	/**

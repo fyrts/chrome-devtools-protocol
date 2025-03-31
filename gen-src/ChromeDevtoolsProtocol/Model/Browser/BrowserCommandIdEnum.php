@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Browser;
  */
 final class BrowserCommandIdEnum
 {
-	public const OPEN_TAB_SEARCH = 'openTabSearch';
-	public const CLOSE_TAB_SEARCH = 'closeTabSearch';
+	const OPEN_TAB_SEARCH = 'openTabSearch';
+	const CLOSE_TAB_SEARCH = 'closeTabSearch';
 }

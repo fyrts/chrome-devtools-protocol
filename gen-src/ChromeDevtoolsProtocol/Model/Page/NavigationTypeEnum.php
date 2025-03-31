@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Page;
  */
 final class NavigationTypeEnum
 {
-	public const NAVIGATION = 'Navigation';
-	public const BACK_FORWARD_CACHE_RESTORE = 'BackForwardCacheRestore';
+	const NAVIGATION = 'Navigation';
+	const BACK_FORWARD_CACHE_RESTORE = 'BackForwardCacheRestore';
 }

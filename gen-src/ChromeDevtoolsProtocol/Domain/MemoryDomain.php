@@ -93,8 +93,9 @@ class MemoryDomain implements MemoryDomainInterface
 	}
 
 
-	public function startSampling(ContextInterface $ctx, StartSamplingRequest $request): void
+	public function startSampling(ContextInterface $ctx, ?StartSamplingRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Memory.startSampling', $request);
 	}
 

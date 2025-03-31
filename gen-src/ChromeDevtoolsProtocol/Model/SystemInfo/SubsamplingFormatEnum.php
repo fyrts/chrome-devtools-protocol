@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\SystemInfo;
  */
 final class SubsamplingFormatEnum
 {
-	public const YUV420 = 'yuv420';
-	public const YUV422 = 'yuv422';
-	public const YUV444 = 'yuv444';
+	const YUV420 = 'yuv420';
+	const YUV422 = 'yuv422';
+	const YUV444 = 'yuv444';
 }

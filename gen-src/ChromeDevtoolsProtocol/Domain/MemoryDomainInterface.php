@@ -126,7 +126,7 @@ interface MemoryDomainInterface
 	 *
 	 * @return void
 	 */
-	public function startSampling(ContextInterface $ctx, StartSamplingRequest $request): void;
+	public function startSampling(ContextInterface $ctx, ?StartSamplingRequest $request = null): void;
 
 
 	/**

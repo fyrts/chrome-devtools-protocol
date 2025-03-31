@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class TrustTokenOperationTypeEnum
 {
-	public const ISSUANCE = 'Issuance';
-	public const REDEMPTION = 'Redemption';
-	public const SIGNING = 'Signing';
+	const ISSUANCE = 'Issuance';
+	const REDEMPTION = 'Redemption';
+	const SIGNING = 'Signing';
 }

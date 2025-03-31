@@ -80,7 +80,7 @@ interface StorageDomainInterface
 	 *
 	 * @return void
 	 */
-	public function clearCookies(ContextInterface $ctx, ClearCookiesRequest $request): void;
+	public function clearCookies(ContextInterface $ctx, ?ClearCookiesRequest $request = null): void;
 
 
 	/**
@@ -171,7 +171,7 @@ interface StorageDomainInterface
 	 *
 	 * @return GetCookiesResponse
 	 */
-	public function getCookies(ContextInterface $ctx, GetCookiesRequest $request): GetCookiesResponse;
+	public function getCookies(ContextInterface $ctx, ?GetCookiesRequest $request = null): GetCookiesResponse;
 
 
 	/**

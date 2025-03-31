@@ -64,8 +64,9 @@ class ProfilerDomain implements ProfilerDomainInterface
 
 	public function startPreciseCoverage(
 		ContextInterface $ctx,
-		StartPreciseCoverageRequest $request
+		?StartPreciseCoverageRequest $request = null
 	): StartPreciseCoverageResponse {
+		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Profiler.startPreciseCoverage', $request);
 		return StartPreciseCoverageResponse::fromJson($response);
 	}

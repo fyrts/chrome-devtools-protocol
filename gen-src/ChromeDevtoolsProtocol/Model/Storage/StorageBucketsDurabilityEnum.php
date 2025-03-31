@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class StorageBucketsDurabilityEnum
 {
-	public const RELAXED = 'relaxed';
-	public const STRICT = 'strict';
+	const RELAXED = 'relaxed';
+	const STRICT = 'strict';
 }

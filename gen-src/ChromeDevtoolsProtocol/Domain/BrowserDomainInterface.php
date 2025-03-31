@@ -145,7 +145,7 @@ interface BrowserDomainInterface
 	 *
 	 * @return GetHistogramsResponse
 	 */
-	public function getHistograms(ContextInterface $ctx, GetHistogramsRequest $request): GetHistogramsResponse;
+	public function getHistograms(ContextInterface $ctx, ?GetHistogramsRequest $request = null): GetHistogramsResponse;
 
 
 	/**
@@ -179,7 +179,7 @@ interface BrowserDomainInterface
 	 */
 	public function getWindowForTarget(
 		ContextInterface $ctx,
-		GetWindowForTargetRequest $request
+		?GetWindowForTargetRequest $request = null
 	): GetWindowForTargetResponse;
 
 
@@ -202,7 +202,7 @@ interface BrowserDomainInterface
 	 *
 	 * @return void
 	 */
-	public function resetPermissions(ContextInterface $ctx, ResetPermissionsRequest $request): void;
+	public function resetPermissions(ContextInterface $ctx, ?ResetPermissionsRequest $request = null): void;
 
 
 	/**
@@ -213,7 +213,7 @@ interface BrowserDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setDockTile(ContextInterface $ctx, SetDockTileRequest $request): void;
+	public function setDockTile(ContextInterface $ctx, ?SetDockTileRequest $request = null): void;
 
 
 	/**

@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\DOM;
  */
 final class CompatibilityModeEnum
 {
-	public const QUIRKS_MODE = 'QuirksMode';
-	public const LIMITED_QUIRKS_MODE = 'LimitedQuirksMode';
-	public const NO_QUIRKS_MODE = 'NoQuirksMode';
+	const QUIRKS_MODE = 'QuirksMode';
+	const LIMITED_QUIRKS_MODE = 'LimitedQuirksMode';
+	const NO_QUIRKS_MODE = 'NoQuirksMode';
 }

@@ -29,7 +29,7 @@ interface AuditsDomainInterface
 	 *
 	 * @return void
 	 */
-	public function checkContrast(ContextInterface $ctx, CheckContrastRequest $request): void;
+	public function checkContrast(ContextInterface $ctx, ?CheckContrastRequest $request = null): void;
 
 
 	/**
