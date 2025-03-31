@@ -250,6 +250,11 @@ class Generator
 						"description" => "Request for {$domainSpec->domain}.{$commandSpec->name} command.",
 						"properties" => $commandSpec->parameters,
 					];
+
+					$isOptional = array_reduce($commandSpec->parameters, function ($isOptional, $parameter) {
+						return $isOptional && ($parameter->optional ?? false);
+					}, true);
+
 					$requestClass = $this->processObjectType($domainSpec->domain, $requestSpec, true);
 					$requestClassName = $requestClass->getNamespace()->getName() . "\\" . $requestClass->getName();
 					$domainInterface->getNamespace()->addUse($requestClassName);
@@ -257,11 +262,26 @@ class Generator
 					$interfaceCommandMethod->setReturnType($requestClassName);
 					$interfaceCommandMethod->addComment("@param {$requestClassAlias} \$request");
 
-					$interfaceCommandMethod->addParameter("request")
-						->setTypeHint($requestClassName);
+					if ($isOptional) {
+						$interfaceCommandMethod->addParameter("request")
+							->setTypeHint($requestClassName)
+							->setNullable()
+							->setDefaultValue(null);
 
-					$implementationCommandMethod->addParameter("request")
-						->setTypeHint($requestClassName);
+						$implementationCommandMethod->addParameter("request")
+							->setTypeHint($requestClassName)
+							->setNullable()
+							->setDefaultValue(null);
+
+						$implementationCommandMethod->addBody("if (is_null(\$request)) \$request = new \stdClass();");
+					} else {
+						$interfaceCommandMethod->addParameter("request")
+							->setTypeHint($requestClassName);
+
+						$implementationCommandMethod->addParameter("request")
+							->setTypeHint($requestClassName);
+					}
+
 					$domainImplementation->getNamespace()->addUse($requestClassName);
 				} else {
 					$implementationCommandMethod->addBody("\$request = new \stdClass();");
