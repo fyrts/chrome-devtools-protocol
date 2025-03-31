@@ -178,6 +178,7 @@ class Launcher
 		$args = array_unique(array_merge(static::$defaultArgs, $args));
 
 		$foundPort = null;
+		$foundOrigins = null;
 		foreach ($args as $arg) {
 			if (strncmp($arg, "--remote-debugging-port=", 24 /* strlen("--remote-debugging-port=") */) === 0) {
 				$foundPort = (int)substr($arg, 24 /* strlen("--remote-debugging-port=") */);
@@ -193,11 +194,17 @@ class Launcher
 						get_class($this)
 					));
 				}
+			} elseif (strncmp($arg, "--remote-allow-origins=", 23 /* strlen("--remote-allow-origins=") */) === 0) {
+				$foundOrigins = true;
 			}
 		}
 
 		if ($foundPort === null) {
 			$args[] = "--remote-debugging-port=" . $this->port;
+		}
+
+		if ($foundOrigins === null) {
+			$args[] = "--remote-allow-origins=*";
 		}
 
 		$foundUserDataDir = false;
