@@ -94,7 +94,7 @@ class Instance implements InstanceInterface, InternalInstanceInterface
 	{
 		$version = $this->version($ctx);
 
-		if (stripos($version->browser, "headless") === false) {
+		if (stripos($version->browser, "headless") === false && stripos($version->userAgent, "headless") === false) {
 			throw new RuntimeException(sprintf(
 				"Only headless Chrome supports creating isolated contexts, current Chrome is [%s].",
 				$version->browser
