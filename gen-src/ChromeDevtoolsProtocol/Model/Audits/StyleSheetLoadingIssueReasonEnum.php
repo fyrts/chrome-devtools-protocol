@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class StyleSheetLoadingIssueReasonEnum
 {
-	const LATE_IMPORT_RULE = 'LateImportRule';
-	const REQUEST_FAILED = 'RequestFailed';
+	public const LATE_IMPORT_RULE = 'LateImportRule';
+	public const REQUEST_FAILED = 'RequestFailed';
 }

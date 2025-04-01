@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class ContentSecurityPolicySourceEnum
 {
-	const HTTP = 'HTTP';
-	const META = 'Meta';
+	public const HTTP = 'HTTP';
+	public const META = 'Meta';
 }

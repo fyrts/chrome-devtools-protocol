@@ -11,5 +11,5 @@ namespace ChromeDevtoolsProtocol\Model\Emulation;
  */
 final class PressureSourceEnum
 {
-	const CPU = 'cpu';
+	public const CPU = 'cpu';
 }

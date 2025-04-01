@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Preload;
  */
 final class SpeculationTargetHintEnum
 {
-	const BLANK = 'Blank';
-	const SELF = 'Self';
+	public const BLANK = 'Blank';
+	public const SELF = 'Self';
 }

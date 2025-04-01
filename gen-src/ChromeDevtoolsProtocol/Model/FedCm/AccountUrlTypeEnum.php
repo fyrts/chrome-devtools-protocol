@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\FedCm;
  */
 final class AccountUrlTypeEnum
 {
-	const TERMS_OF_SERVICE = 'TermsOfService';
-	const PRIVACY_POLICY = 'PrivacyPolicy';
+	public const TERMS_OF_SERVICE = 'TermsOfService';
+	public const PRIVACY_POLICY = 'PrivacyPolicy';
 }

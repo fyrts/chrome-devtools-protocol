@@ -11,12 +11,12 @@ namespace ChromeDevtoolsProtocol\Model\Emulation;
  */
 final class SensorTypeEnum
 {
-	const ABSOLUTE_ORIENTATION = 'absolute-orientation';
-	const ACCELEROMETER = 'accelerometer';
-	const AMBIENT_LIGHT = 'ambient-light';
-	const GRAVITY = 'gravity';
-	const GYROSCOPE = 'gyroscope';
-	const LINEAR_ACCELERATION = 'linear-acceleration';
-	const MAGNETOMETER = 'magnetometer';
-	const RELATIVE_ORIENTATION = 'relative-orientation';
+	public const ABSOLUTE_ORIENTATION = 'absolute-orientation';
+	public const ACCELEROMETER = 'accelerometer';
+	public const AMBIENT_LIGHT = 'ambient-light';
+	public const GRAVITY = 'gravity';
+	public const GYROSCOPE = 'gyroscope';
+	public const LINEAR_ACCELERATION = 'linear-acceleration';
+	public const MAGNETOMETER = 'magnetometer';
+	public const RELATIVE_ORIENTATION = 'relative-orientation';
 }

@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Overlay;
  */
 final class ColorFormatEnum
 {
-	const RGB = 'rgb';
-	const HSL = 'hsl';
-	const HWB = 'hwb';
-	const HEX = 'hex';
+	public const RGB = 'rgb';
+	public const HSL = 'hsl';
+	public const HWB = 'hwb';
+	public const HEX = 'hex';
 }

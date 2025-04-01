@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\WebAudio;
  */
 final class ContextStateEnum
 {
-	const SUSPENDED = 'suspended';
-	const RUNNING = 'running';
-	const CLOSED = 'closed';
-	const INTERRUPTED = 'interrupted';
+	public const SUSPENDED = 'suspended';
+	public const RUNNING = 'running';
+	public const CLOSED = 'closed';
+	public const INTERRUPTED = 'interrupted';
 }

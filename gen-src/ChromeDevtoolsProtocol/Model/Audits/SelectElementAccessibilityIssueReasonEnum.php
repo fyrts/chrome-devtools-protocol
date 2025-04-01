@@ -11,9 +11,9 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
  */
 final class SelectElementAccessibilityIssueReasonEnum
 {
-	const DISALLOWED_SELECT_CHILD = 'DisallowedSelectChild';
-	const DISALLOWED_OPT_GROUP_CHILD = 'DisallowedOptGroupChild';
-	const NON_PHRASING_CONTENT_OPTION_CHILD = 'NonPhrasingContentOptionChild';
-	const INTERACTIVE_CONTENT_OPTION_CHILD = 'InteractiveContentOptionChild';
-	const INTERACTIVE_CONTENT_LEGEND_CHILD = 'InteractiveContentLegendChild';
+	public const DISALLOWED_SELECT_CHILD = 'DisallowedSelectChild';
+	public const DISALLOWED_OPT_GROUP_CHILD = 'DisallowedOptGroupChild';
+	public const NON_PHRASING_CONTENT_OPTION_CHILD = 'NonPhrasingContentOptionChild';
+	public const INTERACTIVE_CONTENT_OPTION_CHILD = 'InteractiveContentOptionChild';
+	public const INTERACTIVE_CONTENT_LEGEND_CHILD = 'InteractiveContentLegendChild';
 }

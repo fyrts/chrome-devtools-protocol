@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Browser;
  */
 final class PrivacySandboxAPIEnum
 {
-	const BIDDING_AND_AUCTION_SERVICES = 'BiddingAndAuctionServices';
-	const TRUSTED_KEY_VALUE = 'TrustedKeyValue';
+	public const BIDDING_AND_AUCTION_SERVICES = 'BiddingAndAuctionServices';
+	public const TRUSTED_KEY_VALUE = 'TrustedKeyValue';
 }

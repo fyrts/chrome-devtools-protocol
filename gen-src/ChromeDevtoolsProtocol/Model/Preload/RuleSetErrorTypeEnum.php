@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Preload;
  */
 final class RuleSetErrorTypeEnum
 {
-	const SOURCE_IS_NOT_JSON_OBJECT = 'SourceIsNotJsonObject';
-	const INVALID_RULES_SKIPPED = 'InvalidRulesSkipped';
+	public const SOURCE_IS_NOT_JSON_OBJECT = 'SourceIsNotJsonObject';
+	public const INVALID_RULES_SKIPPED = 'InvalidRulesSkipped';
 }

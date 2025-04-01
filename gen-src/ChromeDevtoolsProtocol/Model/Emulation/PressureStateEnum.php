@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Emulation;
  */
 final class PressureStateEnum
 {
-	const NOMINAL = 'nominal';
-	const FAIR = 'fair';
-	const SERIOUS = 'serious';
-	const CRITICAL = 'critical';
+	public const NOMINAL = 'nominal';
+	public const FAIR = 'fair';
+	public const SERIOUS = 'serious';
+	public const CRITICAL = 'critical';
 }

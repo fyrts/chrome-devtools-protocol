@@ -11,7 +11,7 @@ namespace ChromeDevtoolsProtocol\Model\DOM;
  */
 final class LogicalAxesEnum
 {
-	const INLINE = 'Inline';
-	const BLOCK = 'Block';
-	const BOTH = 'Both';
+	public const INLINE = 'Inline';
+	public const BLOCK = 'Block';
+	public const BOTH = 'Both';
 }

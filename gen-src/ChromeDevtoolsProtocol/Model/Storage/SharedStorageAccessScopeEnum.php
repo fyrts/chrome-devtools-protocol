@@ -11,8 +11,8 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class SharedStorageAccessScopeEnum
 {
-	const WINDOW = 'window';
-	const SHARED_STORAGE_WORKLET = 'sharedStorageWorklet';
-	const PROTECTED_AUDIENCE_WORKLET = 'protectedAudienceWorklet';
-	const HEADER = 'header';
+	public const WINDOW = 'window';
+	public const SHARED_STORAGE_WORKLET = 'sharedStorageWorklet';
+	public const PROTECTED_AUDIENCE_WORKLET = 'protectedAudienceWorklet';
+	public const HEADER = 'header';
 }

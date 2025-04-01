@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\PWA;
  */
 final class DisplayModeEnum
 {
-	const STANDALONE = 'standalone';
-	const BROWSER = 'browser';
+	public const STANDALONE = 'standalone';
+	public const BROWSER = 'browser';
 }

@@ -11,19 +11,19 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class SharedStorageAccessMethodEnum
 {
-	const ADD_MODULE = 'addModule';
-	const CREATE_WORKLET = 'createWorklet';
-	const SELECT_U_R_L = 'selectURL';
-	const RUN = 'run';
-	const BATCH_UPDATE = 'batchUpdate';
-	const SET = 'set';
-	const APPEND = 'append';
-	const DELETE = 'delete';
-	const CLEAR = 'clear';
-	const GET = 'get';
-	const KEYS = 'keys';
-	const VALUES = 'values';
-	const ENTRIES = 'entries';
-	const LENGTH = 'length';
-	const REMAINING_BUDGET = 'remainingBudget';
+	public const ADD_MODULE = 'addModule';
+	public const CREATE_WORKLET = 'createWorklet';
+	public const SELECT_U_R_L = 'selectURL';
+	public const RUN = 'run';
+	public const BATCH_UPDATE = 'batchUpdate';
+	public const SET = 'set';
+	public const APPEND = 'append';
+	public const DELETE = 'delete';
+	public const CLEAR = 'clear';
+	public const GET = 'get';
+	public const KEYS = 'keys';
+	public const VALUES = 'values';
+	public const ENTRIES = 'entries';
+	public const LENGTH = 'length';
+	public const REMAINING_BUDGET = 'remainingBudget';
 }

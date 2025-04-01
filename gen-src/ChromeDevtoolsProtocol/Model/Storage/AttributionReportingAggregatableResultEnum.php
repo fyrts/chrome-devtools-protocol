@@ -11,19 +11,19 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class AttributionReportingAggregatableResultEnum
 {
-	const SUCCESS = 'success';
-	const INTERNAL_ERROR = 'internalError';
-	const NO_CAPACITY_FOR_ATTRIBUTION_DESTINATION = 'noCapacityForAttributionDestination';
-	const NO_MATCHING_SOURCES = 'noMatchingSources';
-	const EXCESSIVE_ATTRIBUTIONS = 'excessiveAttributions';
-	const EXCESSIVE_REPORTING_ORIGINS = 'excessiveReportingOrigins';
-	const NO_HISTOGRAMS = 'noHistograms';
-	const INSUFFICIENT_BUDGET = 'insufficientBudget';
-	const INSUFFICIENT_NAMED_BUDGET = 'insufficientNamedBudget';
-	const NO_MATCHING_SOURCE_FILTER_DATA = 'noMatchingSourceFilterData';
-	const NOT_REGISTERED = 'notRegistered';
-	const PROHIBITED_BY_BROWSER_POLICY = 'prohibitedByBrowserPolicy';
-	const DEDUPLICATED = 'deduplicated';
-	const REPORT_WINDOW_PASSED = 'reportWindowPassed';
-	const EXCESSIVE_REPORTS = 'excessiveReports';
+	public const SUCCESS = 'success';
+	public const INTERNAL_ERROR = 'internalError';
+	public const NO_CAPACITY_FOR_ATTRIBUTION_DESTINATION = 'noCapacityForAttributionDestination';
+	public const NO_MATCHING_SOURCES = 'noMatchingSources';
+	public const EXCESSIVE_ATTRIBUTIONS = 'excessiveAttributions';
+	public const EXCESSIVE_REPORTING_ORIGINS = 'excessiveReportingOrigins';
+	public const NO_HISTOGRAMS = 'noHistograms';
+	public const INSUFFICIENT_BUDGET = 'insufficientBudget';
+	public const INSUFFICIENT_NAMED_BUDGET = 'insufficientNamedBudget';
+	public const NO_MATCHING_SOURCE_FILTER_DATA = 'noMatchingSourceFilterData';
+	public const NOT_REGISTERED = 'notRegistered';
+	public const PROHIBITED_BY_BROWSER_POLICY = 'prohibitedByBrowserPolicy';
+	public const DEDUPLICATED = 'deduplicated';
+	public const REPORT_WINDOW_PASSED = 'reportWindowPassed';
+	public const EXCESSIVE_REPORTS = 'excessiveReports';
 }

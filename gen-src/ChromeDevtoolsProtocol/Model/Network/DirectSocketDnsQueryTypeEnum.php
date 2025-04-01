@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Network;
  */
 final class DirectSocketDnsQueryTypeEnum
 {
-	const IPV4 = 'ipv4';
-	const IPV6 = 'ipv6';
+	public const IPV4 = 'ipv4';
+	public const IPV6 = 'ipv6';
 }

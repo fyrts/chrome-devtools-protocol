@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class InterestGroupAuctionEventTypeEnum
 {
-	const STARTED = 'started';
-	const CONFIG_RESOLVED = 'configResolved';
+	public const STARTED = 'started';
+	public const CONFIG_RESOLVED = 'configResolved';
 }

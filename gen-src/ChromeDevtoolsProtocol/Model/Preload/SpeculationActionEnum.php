@@ -11,6 +11,6 @@ namespace ChromeDevtoolsProtocol\Model\Preload;
  */
 final class SpeculationActionEnum
 {
-	const PREFETCH = 'Prefetch';
-	const PRERENDER = 'Prerender';
+	public const PREFETCH = 'Prefetch';
+	public const PRERENDER = 'Prerender';
 }

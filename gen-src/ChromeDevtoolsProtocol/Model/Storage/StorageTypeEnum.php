@@ -11,17 +11,17 @@ namespace ChromeDevtoolsProtocol\Model\Storage;
  */
 final class StorageTypeEnum
 {
-	const COOKIES = 'cookies';
-	const FILE_SYSTEMS = 'file_systems';
-	const INDEXEDDB = 'indexeddb';
-	const LOCAL_STORAGE = 'local_storage';
-	const SHADER_CACHE = 'shader_cache';
-	const WEBSQL = 'websql';
-	const SERVICE_WORKERS = 'service_workers';
-	const CACHE_STORAGE = 'cache_storage';
-	const INTEREST_GROUPS = 'interest_groups';
-	const SHARED_STORAGE = 'shared_storage';
-	const STORAGE_BUCKETS = 'storage_buckets';
-	const ALL = 'all';
-	const OTHER = 'other';
+	public const COOKIES = 'cookies';
+	public const FILE_SYSTEMS = 'file_systems';
+	public const INDEXEDDB = 'indexeddb';
+	public const LOCAL_STORAGE = 'local_storage';
+	public const SHADER_CACHE = 'shader_cache';
+	public const WEBSQL = 'websql';
+	public const SERVICE_WORKERS = 'service_workers';
+	public const CACHE_STORAGE = 'cache_storage';
+	public const INTEREST_GROUPS = 'interest_groups';
+	public const SHARED_STORAGE = 'shared_storage';
+	public const STORAGE_BUCKETS = 'storage_buckets';
+	public const ALL = 'all';
+	public const OTHER = 'other';
 }
