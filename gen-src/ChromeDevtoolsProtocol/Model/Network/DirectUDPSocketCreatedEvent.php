@@ -3,22 +3,25 @@
 namespace ChromeDevtoolsProtocol\Model\Network;
 
 /**
- * Fired when there is an error when writing to tcp direct socket stream. For example, if user writes illegal type like string instead of ArrayBuffer or ArrayBufferView. There's no reporting for reading, because we cannot know errors on the other side.
+ * Fired upon direct_socket.UDPSocket creation.
  *
  * @generated This file has been auto-generated, do not edit.
  *
  * @author Jakub Kulhan <jakub.kulhan@gmail.com>
  */
-final class DirectTCPSocketChunkErrorEvent implements \JsonSerializable
+final class DirectUDPSocketCreatedEvent implements \JsonSerializable
 {
 	/** @var string */
 	public $identifier;
 
-	/** @var string */
-	public $errorMessage;
+	/** @var DirectUDPSocketOptions */
+	public $options;
 
 	/** @var int|float */
 	public $timestamp;
+
+	/** @var Initiator|null */
+	public $initiator;
 
 
 	/**
@@ -31,11 +34,14 @@ final class DirectTCPSocketChunkErrorEvent implements \JsonSerializable
 		if (isset($data->identifier)) {
 			$instance->identifier = (string)$data->identifier;
 		}
-		if (isset($data->errorMessage)) {
-			$instance->errorMessage = (string)$data->errorMessage;
+		if (isset($data->options)) {
+			$instance->options = DirectUDPSocketOptions::fromJson($data->options);
 		}
 		if (isset($data->timestamp)) {
 			$instance->timestamp = $data->timestamp;
+		}
+		if (isset($data->initiator)) {
+			$instance->initiator = Initiator::fromJson($data->initiator);
 		}
 		return $instance;
 	}
@@ -48,11 +54,14 @@ final class DirectTCPSocketChunkErrorEvent implements \JsonSerializable
 		if ($this->identifier !== null) {
 			$data->identifier = $this->identifier;
 		}
-		if ($this->errorMessage !== null) {
-			$data->errorMessage = $this->errorMessage;
+		if ($this->options !== null) {
+			$data->options = $this->options->jsonSerialize();
 		}
 		if ($this->timestamp !== null) {
 			$data->timestamp = $this->timestamp;
+		}
+		if ($this->initiator !== null) {
+			$data->initiator = $this->initiator->jsonSerialize();
 		}
 		return $data;
 	}
