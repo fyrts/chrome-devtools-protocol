@@ -18,6 +18,7 @@ use ChromeDevtoolsProtocol\Model\Emulation\SetDisplayFeaturesOverrideRequest;
 use ChromeDevtoolsProtocol\Model\Emulation\SetDocumentCookieDisabledRequest;
 use ChromeDevtoolsProtocol\Model\Emulation\SetEmitTouchEventsForMouseRequest;
 use ChromeDevtoolsProtocol\Model\Emulation\SetEmulatedMediaRequest;
+use ChromeDevtoolsProtocol\Model\Emulation\SetEmulatedOSTextScaleRequest;
 use ChromeDevtoolsProtocol\Model\Emulation\SetEmulatedVisionDeficiencyRequest;
 use ChromeDevtoolsProtocol\Model\Emulation\SetFocusEmulationEnabledRequest;
 use ChromeDevtoolsProtocol\Model\Emulation\SetGeolocationOverrideRequest;
@@ -183,6 +184,13 @@ class EmulationDomain implements EmulationDomainInterface
 	{
 		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Emulation.setEmulatedMedia', $request);
+	}
+
+
+	public function setEmulatedOSTextScale(ContextInterface $ctx, ?SetEmulatedOSTextScaleRequest $request = null): void
+	{
+		if (is_null($request)) $request = new \stdClass();
+		$this->internalClient->executeCommand($ctx, 'Emulation.setEmulatedOSTextScale', $request);
 	}
 
 
