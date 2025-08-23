@@ -31,6 +31,7 @@ use ChromeDevtoolsProtocol\Model\Network\GetCertificateRequest;
 use ChromeDevtoolsProtocol\Model\Network\GetCertificateResponse;
 use ChromeDevtoolsProtocol\Model\Network\GetCookiesRequest;
 use ChromeDevtoolsProtocol\Model\Network\GetCookiesResponse;
+use ChromeDevtoolsProtocol\Model\Network\GetIPProtectionProxyStatusResponse;
 use ChromeDevtoolsProtocol\Model\Network\GetRequestPostDataRequest;
 use ChromeDevtoolsProtocol\Model\Network\GetRequestPostDataResponse;
 use ChromeDevtoolsProtocol\Model\Network\GetResponseBodyForInterceptionRequest;
@@ -207,6 +208,14 @@ class NetworkDomain implements NetworkDomainInterface
 		if (is_null($request)) $request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Network.getCookies', $request);
 		return GetCookiesResponse::fromJson($response);
+	}
+
+
+	public function getIPProtectionProxyStatus(ContextInterface $ctx): GetIPProtectionProxyStatusResponse
+	{
+		$request = new \stdClass();
+		$response = $this->internalClient->executeCommand($ctx, 'Network.getIPProtectionProxyStatus', $request);
+		return GetIPProtectionProxyStatusResponse::fromJson($response);
 	}
 
 
