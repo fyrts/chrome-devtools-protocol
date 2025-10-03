@@ -419,7 +419,7 @@ interface NetworkDomainInterface
 	 *
 	 * @return void
 	 */
-	public function setBlockedURLs(ContextInterface $ctx, SetBlockedURLsRequest $request): void;
+	public function setBlockedURLs(ContextInterface $ctx, ?SetBlockedURLsRequest $request = null): void;
 
 
 	/**

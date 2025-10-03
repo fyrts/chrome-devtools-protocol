@@ -309,8 +309,9 @@ class NetworkDomain implements NetworkDomainInterface
 	}
 
 
-	public function setBlockedURLs(ContextInterface $ctx, SetBlockedURLsRequest $request): void
+	public function setBlockedURLs(ContextInterface $ctx, ?SetBlockedURLsRequest $request = null): void
 	{
+		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Network.setBlockedURLs', $request);
 	}
 
