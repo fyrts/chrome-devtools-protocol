@@ -38,6 +38,8 @@ use ChromeDevtoolsProtocol\Model\Page\FrameSubtreeWillBeDetachedEvent;
 use ChromeDevtoolsProtocol\Model\Page\GenerateTestReportRequest;
 use ChromeDevtoolsProtocol\Model\Page\GetAdScriptAncestryRequest;
 use ChromeDevtoolsProtocol\Model\Page\GetAdScriptAncestryResponse;
+use ChromeDevtoolsProtocol\Model\Page\GetAnnotatedPageContentRequest;
+use ChromeDevtoolsProtocol\Model\Page\GetAnnotatedPageContentResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetAppIdResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetAppManifestRequest;
 use ChromeDevtoolsProtocol\Model\Page\GetAppManifestResponse;
@@ -241,6 +243,16 @@ class PageDomain implements PageDomainInterface
 	): GetAdScriptAncestryResponse {
 		$response = $this->internalClient->executeCommand($ctx, 'Page.getAdScriptAncestry', $request);
 		return GetAdScriptAncestryResponse::fromJson($response);
+	}
+
+
+	public function getAnnotatedPageContent(
+		ContextInterface $ctx,
+		?GetAnnotatedPageContentRequest $request = null
+	): GetAnnotatedPageContentResponse {
+		if (is_null($request)) $request = new \stdClass();
+		$response = $this->internalClient->executeCommand($ctx, 'Page.getAnnotatedPageContent', $request);
+		return GetAnnotatedPageContentResponse::fromJson($response);
 	}
 
 
