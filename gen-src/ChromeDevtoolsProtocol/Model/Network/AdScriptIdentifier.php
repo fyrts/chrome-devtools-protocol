@@ -1,9 +1,9 @@
 <?php
 
-namespace ChromeDevtoolsProtocol\Model\Audits;
+namespace ChromeDevtoolsProtocol\Model\Network;
 
 /**
- * Metadata about the ad script that was on the stack that caused the current script in the `AdAncestry` to be considered ad related.
+ * Identifies the script on the stack that caused a resource or element to be labeled as an ad. For resources, this indicates the context that triggered the fetch. For elements, this indicates the context that caused the element to be appended to the DOM.
  *
  * @generated This file has been auto-generated, do not edit.
  *
@@ -12,14 +12,14 @@ namespace ChromeDevtoolsProtocol\Model\Audits;
 final class AdScriptIdentifier implements \JsonSerializable
 {
 	/**
-	 * The script's v8 identifier.
+	 * The script's V8 identifier.
 	 *
 	 * @var string
 	 */
 	public $scriptId;
 
 	/**
-	 * v8's debugging id for the v8::Context.
+	 * V8's debugging ID for the v8::Context.
 	 *
 	 * @var string
 	 */
