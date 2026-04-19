@@ -1773,7 +1773,11 @@
                         "AutofillAndManualTextPolicyControlledFeaturesInfo",
                         "AutofillPolicyControlledFeatureInfo",
                         "ManualTextPolicyControlledFeatureInfo",
-                        "FormModelContextParameterMissingTitleAndDescription"
+                        "FormModelContextParameterMissingTitleAndDescription",
+                        "FormModelContextMissingToolName",
+                        "FormModelContextMissingToolDescription",
+                        "FormModelContextRequiredParameterMissingName",
+                        "FormModelContextParameterMissingName"
                     ]
                 },
                 {
@@ -32479,6 +32483,12 @@
                             "type": "boolean"
                         },
                         {
+                            "name": "parentId",
+                            "description": "Id of the parent target, if any. For example, \"iframe\" target may have a \"page\" parent.",
+                            "optional": true,
+                            "$ref": "TargetID"
+                        },
+                        {
                             "name": "openerId",
                             "description": "Opener target Id",
                             "optional": true,
@@ -34573,6 +34583,17 @@
                 }
             ],
             "commands": [
+                {
+                    "name": "cancelInvocation",
+                    "description": "Cancels a pending tool invocation.",
+                    "parameters": [
+                        {
+                            "name": "invocationId",
+                            "description": "Invocation identifier to cancel.",
+                            "type": "string"
+                        }
+                    ]
+                },
                 {
                     "name": "disable",
                     "description": "Disables the WebMCP domain."
