@@ -24,6 +24,7 @@ use ChromeDevtoolsProtocol\Model\DOM\DistributedNodesUpdatedEvent;
 use ChromeDevtoolsProtocol\Model\DOM\DocumentUpdatedEvent;
 use ChromeDevtoolsProtocol\Model\DOM\EnableRequest;
 use ChromeDevtoolsProtocol\Model\DOM\FocusRequest;
+use ChromeDevtoolsProtocol\Model\DOM\ForceShowInterestRequest;
 use ChromeDevtoolsProtocol\Model\DOM\ForceShowPopoverRequest;
 use ChromeDevtoolsProtocol\Model\DOM\ForceShowPopoverResponse;
 use ChromeDevtoolsProtocol\Model\DOM\GetAnchorElementRequest;
@@ -161,6 +162,12 @@ class DOMDomain implements DOMDomainInterface
 	{
 		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'DOM.focus', $request);
+	}
+
+
+	public function forceShowInterest(ContextInterface $ctx, ForceShowInterestRequest $request): void
+	{
+		$this->internalClient->executeCommand($ctx, 'DOM.forceShowInterest', $request);
 	}
 
 
