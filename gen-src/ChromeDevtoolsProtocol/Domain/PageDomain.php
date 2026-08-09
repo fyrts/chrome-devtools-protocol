@@ -93,7 +93,10 @@ use ChromeDevtoolsProtocol\Model\Page\SetRPHRegistrationModeRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetSPCTransactionModeRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetTouchEmulationEnabledRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetWebLifecycleStateRequest;
+use ChromeDevtoolsProtocol\Model\Page\StartScreenRecordingRequest;
+use ChromeDevtoolsProtocol\Model\Page\StartScreenRecordingResponse;
 use ChromeDevtoolsProtocol\Model\Page\StartScreencastRequest;
+use ChromeDevtoolsProtocol\Model\Page\StopScreenRecordingResponse;
 use ChromeDevtoolsProtocol\Model\Page\WindowOpenEvent;
 use ChromeDevtoolsProtocol\SubscriptionInterface;
 
@@ -525,6 +528,16 @@ class PageDomain implements PageDomainInterface
 	}
 
 
+	public function startScreenRecording(
+		ContextInterface $ctx,
+		?StartScreenRecordingRequest $request = null
+	): StartScreenRecordingResponse {
+		if (is_null($request)) $request = new \stdClass();
+		$response = $this->internalClient->executeCommand($ctx, 'Page.startScreenRecording', $request);
+		return StartScreenRecordingResponse::fromJson($response);
+	}
+
+
 	public function stopLoading(ContextInterface $ctx): void
 	{
 		$request = new \stdClass();
@@ -536,6 +549,14 @@ class PageDomain implements PageDomainInterface
 	{
 		$request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Page.stopScreencast', $request);
+	}
+
+
+	public function stopScreenRecording(ContextInterface $ctx): StopScreenRecordingResponse
+	{
+		$request = new \stdClass();
+		$response = $this->internalClient->executeCommand($ctx, 'Page.stopScreenRecording', $request);
+		return StopScreenRecordingResponse::fromJson($response);
 	}
 
 
