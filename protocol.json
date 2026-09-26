@@ -13287,6 +13287,17 @@
                                 "enable",
                                 "default"
                             ]
+                        },
+                        {
+                            "name": "textLayoutMode",
+                            "description": "Text layout mode. Default: `default`. Note: if `mobile` is `true`, mobile text layout mode (text autosizing) is always enabled.",
+                            "experimental": true,
+                            "optional": true,
+                            "type": "string",
+                            "enum": [
+                                "mobile",
+                                "default"
+                            ]
                         }
                     ]
                 },
@@ -27897,6 +27908,12 @@
                         {
                             "name": "status",
                             "$ref": "PreloadingStatus"
+                        },
+                        {
+                            "name": "effectiveAction",
+                            "description": "The action currently performed by this attempt. This differs from `key.action` after a prerender-until-script attempt is upgraded in place to a full prerender.",
+                            "optional": true,
+                            "$ref": "SpeculationAction"
                         },
                         {
                             "name": "prerenderStatus",
