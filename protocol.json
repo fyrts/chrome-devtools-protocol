@@ -7574,11 +7574,15 @@
                             "$ref": "Location"
                         },
                         {
-                            "name": "empty",
-                            "description": "True if the scope does not declare any variables. Only present if true. Empty scopes are retained in the scope chain because they can be targeted via `evaluateOnCallFrame` (using `scopeNumber`) or matched against scopes in source maps.",
+                            "name": "emptyReason",
+                            "description": "Present if the scope has no variable values to show. Absent means that the scope declares at least one variable with an available value. Empty scopes are retained in the scope chain because they can be targeted via `evaluateOnCallFrame` (using `scopeNumber`) or matched against scopes in source maps.",
                             "experimental": true,
                             "optional": true,
-                            "type": "boolean"
+                            "type": "string",
+                            "enum": [
+                                "no-variables",
+                                "all-unavailable"
+                            ]
                         }
                     ]
                 },
