@@ -11,6 +11,7 @@ use ChromeDevtoolsProtocol\Model\CSS\ComputedStyleUpdatedEvent;
 use ChromeDevtoolsProtocol\Model\CSS\CreateStyleSheetRequest;
 use ChromeDevtoolsProtocol\Model\CSS\CreateStyleSheetResponse;
 use ChromeDevtoolsProtocol\Model\CSS\FontsUpdatedEvent;
+use ChromeDevtoolsProtocol\Model\CSS\ForcePositionTryOptionRequest;
 use ChromeDevtoolsProtocol\Model\CSS\ForcePseudoStateRequest;
 use ChromeDevtoolsProtocol\Model\CSS\ForceStartingStyleRequest;
 use ChromeDevtoolsProtocol\Model\CSS\GetAnimatedStylesForNodeRequest;
@@ -134,6 +135,17 @@ interface CSSDomainInterface
 	 * @return void
 	 */
 	public function enable(ContextInterface $ctx): void;
+
+
+	/**
+	 * Forces a position-try option for the given node.
+	 *
+	 * @param ContextInterface $ctx
+	 * @param ForcePositionTryOptionRequest $request
+	 *
+	 * @return void
+	 */
+	public function forcePositionTryOption(ContextInterface $ctx, ForcePositionTryOptionRequest $request): void;
 
 
 	/**

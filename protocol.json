@@ -6487,6 +6487,23 @@
                     "description": "Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been enabled until the result of this command is received."
                 },
                 {
+                    "name": "forcePositionTryOption",
+                    "description": "Forces a position-try option for the given node.",
+                    "parameters": [
+                        {
+                            "name": "nodeId",
+                            "description": "The element id for which to force the position-try option.",
+                            "$ref": "DOM.NodeId"
+                        },
+                        {
+                            "name": "index",
+                            "description": "The 1-based index of the position-try fallback option, 0 for base position (no fallback), or omitted to clear the forced state.",
+                            "optional": true,
+                            "type": "integer"
+                        }
+                    ]
+                },
+                {
                     "name": "forcePseudoState",
                     "description": "Ensures that the given node will have specified pseudo-classes whenever its style is computed by the browser.",
                     "parameters": [

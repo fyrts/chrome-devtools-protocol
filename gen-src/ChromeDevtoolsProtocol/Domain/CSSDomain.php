@@ -12,6 +12,7 @@ use ChromeDevtoolsProtocol\Model\CSS\ComputedStyleUpdatedEvent;
 use ChromeDevtoolsProtocol\Model\CSS\CreateStyleSheetRequest;
 use ChromeDevtoolsProtocol\Model\CSS\CreateStyleSheetResponse;
 use ChromeDevtoolsProtocol\Model\CSS\FontsUpdatedEvent;
+use ChromeDevtoolsProtocol\Model\CSS\ForcePositionTryOptionRequest;
 use ChromeDevtoolsProtocol\Model\CSS\ForcePseudoStateRequest;
 use ChromeDevtoolsProtocol\Model\CSS\ForceStartingStyleRequest;
 use ChromeDevtoolsProtocol\Model\CSS\GetAnimatedStylesForNodeRequest;
@@ -117,6 +118,12 @@ class CSSDomain implements CSSDomainInterface
 	{
 		$request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'CSS.enable', $request);
+	}
+
+
+	public function forcePositionTryOption(ContextInterface $ctx, ForcePositionTryOptionRequest $request): void
+	{
+		$this->internalClient->executeCommand($ctx, 'CSS.forcePositionTryOption', $request);
 	}
 
 
