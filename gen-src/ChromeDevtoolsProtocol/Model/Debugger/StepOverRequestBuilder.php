@@ -10,6 +10,7 @@ namespace ChromeDevtoolsProtocol\Model\Debugger;
 final class StepOverRequestBuilder
 {
 	private $skipList;
+	private $enterRanges;
 
 
 	/**
@@ -19,6 +20,7 @@ final class StepOverRequestBuilder
 	{
 		$instance = new StepOverRequest();
 		$instance->skipList = $this->skipList;
+		$instance->enterRanges = $this->enterRanges;
 		return $instance;
 	}
 
@@ -31,6 +33,18 @@ final class StepOverRequestBuilder
 	public function setSkipList($skipList): self
 	{
 		$this->skipList = $skipList;
+		return $this;
+	}
+
+
+	/**
+	 * @param LocationRange[]|null $enterRanges
+	 *
+	 * @return self
+	 */
+	public function setEnterRanges($enterRanges): self
+	{
+		$this->enterRanges = $enterRanges;
 		return $this;
 	}
 }

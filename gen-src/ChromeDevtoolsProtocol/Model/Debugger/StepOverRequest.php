@@ -18,6 +18,13 @@ final class StepOverRequest implements \JsonSerializable
 	 */
 	public $skipList;
 
+	/**
+	 * Functions whose source range lies within one of the enterRanges are entered as if by stepInto, even when they are called (directly or indirectly) from a call that is stepped over.
+	 *
+	 * @var LocationRange[]|null
+	 */
+	public $enterRanges;
+
 
 	/**
 	 * @param object $data
@@ -32,6 +39,12 @@ final class StepOverRequest implements \JsonSerializable
 				$instance->skipList[] = LocationRange::fromJson($item);
 			}
 		}
+		if (isset($data->enterRanges)) {
+			$instance->enterRanges = [];
+			foreach ($data->enterRanges as $item) {
+				$instance->enterRanges[] = LocationRange::fromJson($item);
+			}
+		}
 		return $instance;
 	}
 
@@ -44,6 +57,12 @@ final class StepOverRequest implements \JsonSerializable
 			$data->skipList = [];
 			foreach ($this->skipList as $item) {
 				$data->skipList[] = $item->jsonSerialize();
+			}
+		}
+		if ($this->enterRanges !== null) {
+			$data->enterRanges = [];
+			foreach ($this->enterRanges as $item) {
+				$data->enterRanges[] = $item->jsonSerialize();
 			}
 		}
 		return $data;

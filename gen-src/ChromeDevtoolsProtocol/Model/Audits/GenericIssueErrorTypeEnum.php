@@ -32,4 +32,5 @@ final class GenericIssueErrorTypeEnum
 	public const FORM_MODEL_CONTEXT_MISSING_TOOL_DESCRIPTION = 'FormModelContextMissingToolDescription';
 	public const FORM_MODEL_CONTEXT_REQUIRED_PARAMETER_MISSING_NAME = 'FormModelContextRequiredParameterMissingName';
 	public const FORM_MODEL_CONTEXT_PARAMETER_MISSING_NAME = 'FormModelContextParameterMissingName';
+	public const GEOLOCATION_PROMPT_WITHOUT_USER_GESTURE = 'GeolocationPromptWithoutUserGesture';
 }

@@ -55,6 +55,8 @@ use ChromeDevtoolsProtocol\Model\Page\GetResourceContentRequest;
 use ChromeDevtoolsProtocol\Model\Page\GetResourceContentResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetResourceTreeResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetSiblingSubAppsResponse;
+use ChromeDevtoolsProtocol\Model\Page\GetSpellCheckCustomDictionaryRequest;
+use ChromeDevtoolsProtocol\Model\Page\GetSpellCheckCustomDictionaryResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetSubAppsResponse;
 use ChromeDevtoolsProtocol\Model\Page\HandleJavaScriptDialogRequest;
 use ChromeDevtoolsProtocol\Model\Page\InterstitialHiddenEvent;
@@ -460,6 +462,20 @@ interface PageDomainInterface
 	 * @return GetSiblingSubAppsResponse
 	 */
 	public function getSiblingSubApps(ContextInterface $ctx): GetSiblingSubAppsResponse;
+
+
+	/**
+	 * Returns the words that the frame's document added to its spell check custom dictionary with `document.spellCheckCustomDictionary.addWords()`, sorted. Page script cannot read the dictionary back; this lets developers inspect it.
+	 *
+	 * @param ContextInterface $ctx
+	 * @param GetSpellCheckCustomDictionaryRequest $request
+	 *
+	 * @return GetSpellCheckCustomDictionaryResponse
+	 */
+	public function getSpellCheckCustomDictionary(
+		ContextInterface $ctx,
+		GetSpellCheckCustomDictionaryRequest $request
+	): GetSpellCheckCustomDictionaryResponse;
 
 
 	/**

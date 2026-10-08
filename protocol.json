@@ -1877,7 +1877,8 @@
                         "FormModelContextMissingToolName",
                         "FormModelContextMissingToolDescription",
                         "FormModelContextRequiredParameterMissingName",
-                        "FormModelContextParameterMissingName"
+                        "FormModelContextParameterMissingName",
+                        "GeolocationPromptWithoutUserGesture"
                     ]
                 },
                 {
@@ -8511,6 +8512,16 @@
                         {
                             "name": "skipList",
                             "description": "The skipList specifies location ranges that should be skipped on step over.",
+                            "experimental": true,
+                            "optional": true,
+                            "type": "array",
+                            "items": {
+                                "$ref": "LocationRange"
+                            }
+                        },
+                        {
+                            "name": "enterRanges",
+                            "description": "Functions whose source range lies within one of the enterRanges are entered as if by stepInto, even when they are called (directly or indirectly) from a call that is stepped over.",
                             "experimental": true,
                             "optional": true,
                             "type": "array",
@@ -25920,6 +25931,26 @@
                             "type": "array",
                             "items": {
                                 "$ref": "SubApp"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getSpellCheckCustomDictionary",
+                    "description": "Returns the words that the frame's document added to its spell check custom dictionary with `document.spellCheckCustomDictionary.addWords()`, sorted. Page script cannot read the dictionary back; this lets developers inspect it.",
+                    "experimental": true,
+                    "parameters": [
+                        {
+                            "name": "frameId",
+                            "$ref": "FrameId"
+                        }
+                    ],
+                    "returns": [
+                        {
+                            "name": "words",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
                             }
                         }
                     ]

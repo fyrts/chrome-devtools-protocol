@@ -56,6 +56,8 @@ use ChromeDevtoolsProtocol\Model\Page\GetResourceContentRequest;
 use ChromeDevtoolsProtocol\Model\Page\GetResourceContentResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetResourceTreeResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetSiblingSubAppsResponse;
+use ChromeDevtoolsProtocol\Model\Page\GetSpellCheckCustomDictionaryRequest;
+use ChromeDevtoolsProtocol\Model\Page\GetSpellCheckCustomDictionaryResponse;
 use ChromeDevtoolsProtocol\Model\Page\GetSubAppsResponse;
 use ChromeDevtoolsProtocol\Model\Page\HandleJavaScriptDialogRequest;
 use ChromeDevtoolsProtocol\Model\Page\InterstitialHiddenEvent;
@@ -355,6 +357,15 @@ class PageDomain implements PageDomainInterface
 		$request = new \stdClass();
 		$response = $this->internalClient->executeCommand($ctx, 'Page.getSiblingSubApps', $request);
 		return GetSiblingSubAppsResponse::fromJson($response);
+	}
+
+
+	public function getSpellCheckCustomDictionary(
+		ContextInterface $ctx,
+		GetSpellCheckCustomDictionaryRequest $request
+	): GetSpellCheckCustomDictionaryResponse {
+		$response = $this->internalClient->executeCommand($ctx, 'Page.getSpellCheckCustomDictionary', $request);
+		return GetSpellCheckCustomDictionaryResponse::fromJson($response);
 	}
 
 
