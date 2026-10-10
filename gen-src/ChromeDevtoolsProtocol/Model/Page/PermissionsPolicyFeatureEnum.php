@@ -97,8 +97,6 @@ final class PermissionsPolicyFeatureEnum
 	public const REWRITER = 'rewriter';
 	public const SCREEN_WAKE_LOCK = 'screen-wake-lock';
 	public const SERIAL = 'serial';
-	public const SHARED_STORAGE = 'shared-storage';
-	public const SHARED_STORAGE_SELECT_URL = 'shared-storage-select-url';
 	public const SMART_CARD = 'smart-card';
 	public const SPEAKER_SELECTION = 'speaker-selection';
 	public const STORAGE_ACCESS = 'storage-access';

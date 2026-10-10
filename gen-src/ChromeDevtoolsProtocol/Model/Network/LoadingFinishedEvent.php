@@ -32,6 +32,13 @@ final class LoadingFinishedEvent implements \JsonSerializable
 	 */
 	public $encodedDataLength;
 
+	/**
+	 * Size of the response body before removing content encodings. Includes cached bodies, but excludes headers and transfer framing.
+	 *
+	 * @var int|float|null
+	 */
+	public $encodedBodyLength;
+
 
 	/**
 	 * @param object $data
@@ -49,6 +56,9 @@ final class LoadingFinishedEvent implements \JsonSerializable
 		if (isset($data->encodedDataLength)) {
 			$instance->encodedDataLength = $data->encodedDataLength;
 		}
+		if (isset($data->encodedBodyLength)) {
+			$instance->encodedBodyLength = $data->encodedBodyLength;
+		}
 		return $instance;
 	}
 
@@ -65,6 +75,9 @@ final class LoadingFinishedEvent implements \JsonSerializable
 		}
 		if ($this->encodedDataLength !== null) {
 			$data->encodedDataLength = $this->encodedDataLength;
+		}
+		if ($this->encodedBodyLength !== null) {
+			$data->encodedBodyLength = $this->encodedBodyLength;
 		}
 		return $data;
 	}

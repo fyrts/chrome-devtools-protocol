@@ -21717,6 +21717,13 @@
                             "name": "encodedDataLength",
                             "description": "Total number of bytes received for this request.",
                             "type": "number"
+                        },
+                        {
+                            "name": "encodedBodyLength",
+                            "description": "Size of the response body before removing content encodings. Includes cached bodies, but excludes headers and transfer framing.",
+                            "experimental": true,
+                            "optional": true,
+                            "type": "number"
                         }
                     ]
                 },
@@ -23847,8 +23854,6 @@
                         "rewriter",
                         "screen-wake-lock",
                         "serial",
-                        "shared-storage",
-                        "shared-storage-select-url",
                         "smart-card",
                         "speaker-selection",
                         "storage-access",
