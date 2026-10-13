@@ -16772,6 +16772,7 @@
                 {
                     "name": "resolveBlob",
                     "description": "Return UUID of Blob object specified by a remote object id.",
+                    "deprecated": true,
                     "parameters": [
                         {
                             "name": "objectId",
@@ -26534,6 +26535,19 @@
                             "description": "Mock accuracy",
                             "optional": true,
                             "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "name": "setInputVisualization",
+                    "description": "Configures input visualization on the page.",
+                    "experimental": true,
+                    "parameters": [
+                        {
+                            "name": "clicks",
+                            "description": "Whether to enable click visualization.",
+                            "optional": true,
+                            "type": "boolean"
                         }
                     ]
                 },

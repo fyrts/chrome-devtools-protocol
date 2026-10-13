@@ -89,6 +89,7 @@ use ChromeDevtoolsProtocol\Model\Page\SetDownloadBehaviorRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetFontFamiliesRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetFontSizesRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetGeolocationOverrideRequest;
+use ChromeDevtoolsProtocol\Model\Page\SetInputVisualizationRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetInterceptFileChooserDialogRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetLifecycleEventsEnabledRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetPrerenderingAllowedRequest;
@@ -708,6 +709,17 @@ interface PageDomainInterface
 	 * @return void
 	 */
 	public function setGeolocationOverride(ContextInterface $ctx, ?SetGeolocationOverrideRequest $request = null): void;
+
+
+	/**
+	 * Configures input visualization on the page.
+	 *
+	 * @param ContextInterface $ctx
+	 * @param SetInputVisualizationRequest $request
+	 *
+	 * @return void
+	 */
+	public function setInputVisualization(ContextInterface $ctx, ?SetInputVisualizationRequest $request = null): void;
 
 
 	/**

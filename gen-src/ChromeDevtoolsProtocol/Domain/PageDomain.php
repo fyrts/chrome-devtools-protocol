@@ -90,6 +90,7 @@ use ChromeDevtoolsProtocol\Model\Page\SetDownloadBehaviorRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetFontFamiliesRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetFontSizesRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetGeolocationOverrideRequest;
+use ChromeDevtoolsProtocol\Model\Page\SetInputVisualizationRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetInterceptFileChooserDialogRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetLifecycleEventsEnabledRequest;
 use ChromeDevtoolsProtocol\Model\Page\SetPrerenderingAllowedRequest;
@@ -503,6 +504,13 @@ class PageDomain implements PageDomainInterface
 	{
 		if (is_null($request)) $request = new \stdClass();
 		$this->internalClient->executeCommand($ctx, 'Page.setGeolocationOverride', $request);
+	}
+
+
+	public function setInputVisualization(ContextInterface $ctx, ?SetInputVisualizationRequest $request = null): void
+	{
+		if (is_null($request)) $request = new \stdClass();
+		$this->internalClient->executeCommand($ctx, 'Page.setInputVisualization', $request);
 	}
 
 
