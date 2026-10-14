@@ -105,6 +105,7 @@ final class PermissionsPolicyFeatureEnum
 	public const SYNC_XHR = 'sync-xhr';
 	public const TOOLS = 'tools';
 	public const TRANSLATOR = 'translator';
+	public const UNBOUNDED_ELEMENT = 'unbounded-element';
 	public const UNLOAD = 'unload';
 	public const USB = 'usb';
 	public const USB_UNRESTRICTED = 'usb-unrestricted';
