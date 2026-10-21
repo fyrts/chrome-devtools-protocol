@@ -21573,6 +21573,13 @@
                         },
                         {
                             "name": "IPAddress",
+                            "description": "Multicast group address.",
+                            "type": "string"
+                        },
+                        {
+                            "name": "sourceAddress",
+                            "description": "Source address of a source-specific multicast (SSM) membership. Absent for any-source multicast (ASM) memberships.",
+                            "optional": true,
                             "type": "string"
                         }
                     ]
@@ -21587,6 +21594,13 @@
                         },
                         {
                             "name": "IPAddress",
+                            "description": "Multicast group address.",
+                            "type": "string"
+                        },
+                        {
+                            "name": "sourceAddress",
+                            "description": "Source address of a source-specific multicast (SSM) membership. Absent for any-source multicast (ASM) memberships.",
+                            "optional": true,
                             "type": "string"
                         }
                     ]

@@ -14,8 +14,19 @@ final class DirectUDPSocketLeftMulticastGroupEvent implements \JsonSerializable
 	/** @var string */
 	public $identifier;
 
-	/** @var string */
+	/**
+	 * Multicast group address.
+	 *
+	 * @var string
+	 */
 	public $IPAddress;
+
+	/**
+	 * Source address of a source-specific multicast (SSM) membership. Absent for any-source multicast (ASM) memberships.
+	 *
+	 * @var string|null
+	 */
+	public $sourceAddress;
 
 
 	/**
@@ -31,6 +42,9 @@ final class DirectUDPSocketLeftMulticastGroupEvent implements \JsonSerializable
 		if (isset($data->IPAddress)) {
 			$instance->IPAddress = (string)$data->IPAddress;
 		}
+		if (isset($data->sourceAddress)) {
+			$instance->sourceAddress = (string)$data->sourceAddress;
+		}
 		return $instance;
 	}
 
@@ -44,6 +58,9 @@ final class DirectUDPSocketLeftMulticastGroupEvent implements \JsonSerializable
 		}
 		if ($this->IPAddress !== null) {
 			$data->IPAddress = $this->IPAddress;
+		}
+		if ($this->sourceAddress !== null) {
+			$data->sourceAddress = $this->sourceAddress;
 		}
 		return $data;
 	}
