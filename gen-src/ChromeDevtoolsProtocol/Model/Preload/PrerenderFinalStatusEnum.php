@@ -87,4 +87,5 @@ final class PrerenderFinalStatusEnum
 	public const PRERENDER_HOST_REUSED = 'PrerenderHostReused';
 	public const FORM_SUBMIT_WHEN_PRERENDERING = 'FormSubmitWhenPrerendering';
 	public const CROSS_DOCUMENT_RESTART = 'CrossDocumentRestart';
+	public const PREFETCH_FAILED_CROSS_ORIGIN_SUBFRAME = 'PrefetchFailedCrossOriginSubframe';
 }
