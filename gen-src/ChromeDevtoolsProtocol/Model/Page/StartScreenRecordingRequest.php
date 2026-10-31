@@ -35,6 +35,13 @@ final class StartScreenRecordingRequest implements \JsonSerializable
 	 */
 	public $frameRate;
 
+	/**
+	 * The area to record. Defaults to `target`.
+	 *
+	 * @var string|null
+	 */
+	public $captureArea;
+
 
 	/**
 	 * @param object $data
@@ -55,6 +62,9 @@ final class StartScreenRecordingRequest implements \JsonSerializable
 		if (isset($data->frameRate)) {
 			$instance->frameRate = (int)$data->frameRate;
 		}
+		if (isset($data->captureArea)) {
+			$instance->captureArea = (string)$data->captureArea;
+		}
 		return $instance;
 	}
 
@@ -74,6 +84,9 @@ final class StartScreenRecordingRequest implements \JsonSerializable
 		}
 		if ($this->frameRate !== null) {
 			$data->frameRate = $this->frameRate;
+		}
+		if ($this->captureArea !== null) {
+			$data->captureArea = $this->captureArea;
 		}
 		return $data;
 	}

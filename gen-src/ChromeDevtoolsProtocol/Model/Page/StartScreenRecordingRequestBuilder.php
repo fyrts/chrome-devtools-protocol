@@ -13,6 +13,7 @@ final class StartScreenRecordingRequestBuilder
 	private $maxWidth;
 	private $maxHeight;
 	private $frameRate;
+	private $captureArea;
 
 
 	/**
@@ -25,6 +26,7 @@ final class StartScreenRecordingRequestBuilder
 		$instance->maxWidth = $this->maxWidth;
 		$instance->maxHeight = $this->maxHeight;
 		$instance->frameRate = $this->frameRate;
+		$instance->captureArea = $this->captureArea;
 		return $instance;
 	}
 
@@ -73,6 +75,18 @@ final class StartScreenRecordingRequestBuilder
 	public function setFrameRate($frameRate): self
 	{
 		$this->frameRate = $frameRate;
+		return $this;
+	}
+
+
+	/**
+	 * @param string|null $captureArea
+	 *
+	 * @return self
+	 */
+	public function setCaptureArea($captureArea): self
+	{
+		$this->captureArea = $captureArea;
 		return $this;
 	}
 }
