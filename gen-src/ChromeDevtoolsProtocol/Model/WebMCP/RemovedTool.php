@@ -12,6 +12,13 @@ namespace ChromeDevtoolsProtocol\Model\WebMCP;
 final class RemovedTool implements \JsonSerializable
 {
 	/**
+	 * Identifier of the removed tool.
+	 *
+	 * @var string
+	 */
+	public $toolId;
+
+	/**
 	 * Tool name.
 	 *
 	 * @var string
@@ -33,6 +40,9 @@ final class RemovedTool implements \JsonSerializable
 	public static function fromJson($data)
 	{
 		$instance = new static();
+		if (isset($data->toolId)) {
+			$instance->toolId = (string)$data->toolId;
+		}
 		if (isset($data->name)) {
 			$instance->name = (string)$data->name;
 		}
@@ -47,6 +57,9 @@ final class RemovedTool implements \JsonSerializable
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();
+		if ($this->toolId !== null) {
+			$data->toolId = $this->toolId;
+		}
 		if ($this->name !== null) {
 			$data->name = $this->name;
 		}

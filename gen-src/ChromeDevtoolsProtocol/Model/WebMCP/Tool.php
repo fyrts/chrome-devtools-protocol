@@ -14,6 +14,13 @@ use ChromeDevtoolsProtocol\Model\Runtime\StackTrace;
 final class Tool implements \JsonSerializable
 {
 	/**
+	 * Tool identifier.
+	 *
+	 * @var string
+	 */
+	public $toolId;
+
+	/**
 	 * Tool name.
 	 *
 	 * @var string
@@ -33,6 +40,13 @@ final class Tool implements \JsonSerializable
 	 * @var object|null
 	 */
 	public $inputSchema;
+
+	/**
+	 * Schema for the tool's output structure.
+	 *
+	 * @var object|null
+	 */
+	public $outputSchema;
 
 	/**
 	 * Optional annotations for the tool.
@@ -70,6 +84,9 @@ final class Tool implements \JsonSerializable
 	public static function fromJson($data)
 	{
 		$instance = new static();
+		if (isset($data->toolId)) {
+			$instance->toolId = (string)$data->toolId;
+		}
 		if (isset($data->name)) {
 			$instance->name = (string)$data->name;
 		}
@@ -78,6 +95,9 @@ final class Tool implements \JsonSerializable
 		}
 		if (isset($data->inputSchema)) {
 			$instance->inputSchema = $data->inputSchema;
+		}
+		if (isset($data->outputSchema)) {
+			$instance->outputSchema = $data->outputSchema;
 		}
 		if (isset($data->annotations)) {
 			$instance->annotations = Annotation::fromJson($data->annotations);
@@ -99,6 +119,9 @@ final class Tool implements \JsonSerializable
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();
+		if ($this->toolId !== null) {
+			$data->toolId = $this->toolId;
+		}
 		if ($this->name !== null) {
 			$data->name = $this->name;
 		}
@@ -107,6 +130,9 @@ final class Tool implements \JsonSerializable
 		}
 		if ($this->inputSchema !== null) {
 			$data->inputSchema = $this->inputSchema;
+		}
+		if ($this->outputSchema !== null) {
+			$data->outputSchema = $this->outputSchema;
 		}
 		if ($this->annotations !== null) {
 			$data->annotations = $this->annotations->jsonSerialize();

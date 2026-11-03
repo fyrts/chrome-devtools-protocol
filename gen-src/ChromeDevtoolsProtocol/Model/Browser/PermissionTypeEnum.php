@@ -42,7 +42,6 @@ final class PermissionTypeEnum
 	public const SMART_CARD = 'smartCard';
 	public const SPEAKER_SELECTION = 'speakerSelection';
 	public const STORAGE_ACCESS = 'storageAccess';
-	public const TOP_LEVEL_STORAGE_ACCESS = 'topLevelStorageAccess';
 	public const VIDEO_CAPTURE = 'videoCapture';
 	public const VR = 'vr';
 	public const WAKE_LOCK_SCREEN = 'wakeLockScreen';

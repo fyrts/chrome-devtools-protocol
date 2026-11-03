@@ -18,7 +18,6 @@ final class PermissionsPolicyFeatureEnum
 	public const AUTOFILL = 'autofill';
 	public const AUTOPLAY = 'autoplay';
 	public const BLUETOOTH = 'bluetooth';
-	public const BROWSING_TOPICS = 'browsing-topics';
 	public const CAMERA = 'camera';
 	public const CAPTURED_SURFACE_CONTROL = 'captured-surface-control';
 	public const CH_DPR = 'ch-dpr';
@@ -72,7 +71,6 @@ final class PermissionsPolicyFeatureEnum
 	public const HID = 'hid';
 	public const IDENTITY_CREDENTIALS_GET = 'identity-credentials-get';
 	public const IDLE_DETECTION = 'idle-detection';
-	public const INTEREST_COHORT = 'interest-cohort';
 	public const KEYBOARD_MAP = 'keyboard-map';
 	public const LANGUAGE_DETECTOR = 'language-detector';
 	public const LANGUAGE_MODEL = 'language-model';

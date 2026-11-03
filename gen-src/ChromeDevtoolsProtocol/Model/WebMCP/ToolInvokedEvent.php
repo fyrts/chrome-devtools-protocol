@@ -12,13 +12,6 @@ namespace ChromeDevtoolsProtocol\Model\WebMCP;
 final class ToolInvokedEvent implements \JsonSerializable
 {
 	/**
-	 * Name of the tool to invoke.
-	 *
-	 * @var string
-	 */
-	public $toolName;
-
-	/**
 	 * Frame id
 	 *
 	 * @var string
@@ -39,6 +32,20 @@ final class ToolInvokedEvent implements \JsonSerializable
 	 */
 	public $input;
 
+	/**
+	 * Name of the tool to invoke. Missing if the tool was invoked by its identifier, but could not be found (e.g., it was already unregistered), so its name could not be recovered.
+	 *
+	 * @var string|null
+	 */
+	public $toolName;
+
+	/**
+	 * Identifier of the tool to invoke. Missing if the tool was invoked by name, but could not be found, so its identifier could not be recovered.
+	 *
+	 * @var string
+	 */
+	public $toolId;
+
 
 	/**
 	 * @param object $data
@@ -47,9 +54,6 @@ final class ToolInvokedEvent implements \JsonSerializable
 	public static function fromJson($data)
 	{
 		$instance = new static();
-		if (isset($data->toolName)) {
-			$instance->toolName = (string)$data->toolName;
-		}
 		if (isset($data->frameId)) {
 			$instance->frameId = (string)$data->frameId;
 		}
@@ -59,6 +63,12 @@ final class ToolInvokedEvent implements \JsonSerializable
 		if (isset($data->input)) {
 			$instance->input = (string)$data->input;
 		}
+		if (isset($data->toolName)) {
+			$instance->toolName = (string)$data->toolName;
+		}
+		if (isset($data->toolId)) {
+			$instance->toolId = (string)$data->toolId;
+		}
 		return $instance;
 	}
 
@@ -67,9 +77,6 @@ final class ToolInvokedEvent implements \JsonSerializable
 	public function jsonSerialize()
 	{
 		$data = new \stdClass();
-		if ($this->toolName !== null) {
-			$data->toolName = $this->toolName;
-		}
 		if ($this->frameId !== null) {
 			$data->frameId = $this->frameId;
 		}
@@ -78,6 +85,12 @@ final class ToolInvokedEvent implements \JsonSerializable
 		}
 		if ($this->input !== null) {
 			$data->input = $this->input;
+		}
+		if ($this->toolName !== null) {
+			$data->toolName = $this->toolName;
+		}
+		if ($this->toolId !== null) {
+			$data->toolId = $this->toolId;
 		}
 		return $data;
 	}
