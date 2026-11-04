@@ -94,6 +94,7 @@ final class PermissionsPolicyFeatureEnum
 	public const PUBLICKEY_CREDENTIALS_REMOTE_CLIENT_DATA_JSON = 'publickey-credentials-remote-client-data-json';
 	public const REWRITER = 'rewriter';
 	public const SCREEN_WAKE_LOCK = 'screen-wake-lock';
+	public const SEMANTIC_EMBEDDER = 'semantic-embedder';
 	public const SERIAL = 'serial';
 	public const SMART_CARD = 'smart-card';
 	public const SPEAKER_SELECTION = 'speaker-selection';
