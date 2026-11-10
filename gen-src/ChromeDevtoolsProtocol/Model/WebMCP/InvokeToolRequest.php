@@ -19,9 +19,16 @@ final class InvokeToolRequest implements \JsonSerializable
 	public $frameId;
 
 	/**
-	 * Name of the tool to invoke.
+	 * Identifier of the tool to invoke, as reported in `Tool.toolId`. Invokes exactly that tool, and fails if it is no longer registered, even if a different tool has since been registered under the same name.
 	 *
 	 * @var string
+	 */
+	public $toolId;
+
+	/**
+	 * Name of the tool to invoke. Deprecated: invokes whichever tool is registered under this name when the command is handled, which may not be the tool the client observed if the page has since replaced it. Use `toolId` instead.
+	 *
+	 * @var string|null
 	 */
 	public $toolName;
 
@@ -43,6 +50,9 @@ final class InvokeToolRequest implements \JsonSerializable
 		if (isset($data->frameId)) {
 			$instance->frameId = (string)$data->frameId;
 		}
+		if (isset($data->toolId)) {
+			$instance->toolId = (string)$data->toolId;
+		}
 		if (isset($data->toolName)) {
 			$instance->toolName = (string)$data->toolName;
 		}
@@ -59,6 +69,9 @@ final class InvokeToolRequest implements \JsonSerializable
 		$data = new \stdClass();
 		if ($this->frameId !== null) {
 			$data->frameId = $this->frameId;
+		}
+		if ($this->toolId !== null) {
+			$data->toolId = $this->toolId;
 		}
 		if ($this->toolName !== null) {
 			$data->toolName = $this->toolName;

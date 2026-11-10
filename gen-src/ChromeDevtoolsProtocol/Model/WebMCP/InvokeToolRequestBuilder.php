@@ -12,6 +12,7 @@ use ChromeDevtoolsProtocol\Exception\BuilderException;
 final class InvokeToolRequestBuilder
 {
 	private $frameId;
+	private $toolId;
 	private $toolName;
 	private $input;
 
@@ -26,9 +27,7 @@ final class InvokeToolRequestBuilder
 			throw new BuilderException('Property [frameId] is required.');
 		}
 		$instance->frameId = $this->frameId;
-		if ($this->toolName === null) {
-			throw new BuilderException('Property [toolName] is required.');
-		}
+		$instance->toolId = $this->toolId;
 		$instance->toolName = $this->toolName;
 		if ($this->input === null) {
 			throw new BuilderException('Property [input] is required.');
@@ -51,7 +50,19 @@ final class InvokeToolRequestBuilder
 
 
 	/**
-	 * @param string $toolName
+	 * @param string $toolId
+	 *
+	 * @return self
+	 */
+	public function setToolId($toolId): self
+	{
+		$this->toolId = $toolId;
+		return $this;
+	}
+
+
+	/**
+	 * @param string|null $toolName
 	 *
 	 * @return self
 	 */

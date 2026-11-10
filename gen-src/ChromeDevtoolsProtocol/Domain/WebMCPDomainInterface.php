@@ -55,7 +55,7 @@ interface WebMCPDomainInterface
 
 
 	/**
-	 * Invokes a registered tool.
+	 * Invokes a registered tool. Exactly one of `toolId` and `toolName` must be specified; the command fails if both or neither are.
 	 *
 	 * @param ContextInterface $ctx
 	 * @param InvokeToolRequest $request
