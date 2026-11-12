@@ -5,7 +5,6 @@ namespace ChromeDevtoolsProtocol\Domain;
 use ChromeDevtoolsProtocol\ContextInterface;
 use ChromeDevtoolsProtocol\InternalClientInterface;
 use ChromeDevtoolsProtocol\Model\Browser\AddMockCameraRequest;
-use ChromeDevtoolsProtocol\Model\Browser\AddPrivacySandboxEnrollmentOverrideRequest;
 use ChromeDevtoolsProtocol\Model\Browser\CancelDownloadRequest;
 use ChromeDevtoolsProtocol\Model\Browser\DownloadProgressEvent;
 use ChromeDevtoolsProtocol\Model\Browser\DownloadWillBeginEvent;
@@ -47,14 +46,6 @@ class BrowserDomain implements BrowserDomainInterface
 	public function addMockCamera(ContextInterface $ctx, AddMockCameraRequest $request): void
 	{
 		$this->internalClient->executeCommand($ctx, 'Browser.addMockCamera', $request);
-	}
-
-
-	public function addPrivacySandboxEnrollmentOverride(
-		ContextInterface $ctx,
-		AddPrivacySandboxEnrollmentOverrideRequest $request
-	): void {
-		$this->internalClient->executeCommand($ctx, 'Browser.addPrivacySandboxEnrollmentOverride', $request);
 	}
 
 

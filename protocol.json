@@ -3906,16 +3906,6 @@
                     ]
                 },
                 {
-                    "name": "addPrivacySandboxEnrollmentOverride",
-                    "description": "Allows a site to use privacy sandbox features that require enrollment without the site actually being enrolled. Only supported on page targets.",
-                    "parameters": [
-                        {
-                            "name": "url",
-                            "type": "string"
-                        }
-                    ]
-                },
-                {
                     "name": "cancelDownload",
                     "description": "Cancel a download if in progress",
                     "experimental": true,
