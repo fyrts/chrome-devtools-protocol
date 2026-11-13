@@ -14,6 +14,8 @@ use ChromeDevtoolsProtocol\Model\Debugger\EvaluateOnCallFrameRequest;
 use ChromeDevtoolsProtocol\Model\Debugger\EvaluateOnCallFrameResponse;
 use ChromeDevtoolsProtocol\Model\Debugger\GetPossibleBreakpointsRequest;
 use ChromeDevtoolsProtocol\Model\Debugger\GetPossibleBreakpointsResponse;
+use ChromeDevtoolsProtocol\Model\Debugger\GetScopeChainRequest;
+use ChromeDevtoolsProtocol\Model\Debugger\GetScopeChainResponse;
 use ChromeDevtoolsProtocol\Model\Debugger\GetScriptSourceRequest;
 use ChromeDevtoolsProtocol\Model\Debugger\GetScriptSourceResponse;
 use ChromeDevtoolsProtocol\Model\Debugger\GetStackTraceRequest;
@@ -113,6 +115,13 @@ class DebuggerDomain implements DebuggerDomainInterface
 	): GetPossibleBreakpointsResponse {
 		$response = $this->internalClient->executeCommand($ctx, 'Debugger.getPossibleBreakpoints', $request);
 		return GetPossibleBreakpointsResponse::fromJson($response);
+	}
+
+
+	public function getScopeChain(ContextInterface $ctx, GetScopeChainRequest $request): GetScopeChainResponse
+	{
+		$response = $this->internalClient->executeCommand($ctx, 'Debugger.getScopeChain', $request);
+		return GetScopeChainResponse::fromJson($response);
 	}
 
 

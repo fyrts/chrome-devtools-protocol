@@ -13,6 +13,8 @@ use ChromeDevtoolsProtocol\Model\Debugger\EvaluateOnCallFrameRequest;
 use ChromeDevtoolsProtocol\Model\Debugger\EvaluateOnCallFrameResponse;
 use ChromeDevtoolsProtocol\Model\Debugger\GetPossibleBreakpointsRequest;
 use ChromeDevtoolsProtocol\Model\Debugger\GetPossibleBreakpointsResponse;
+use ChromeDevtoolsProtocol\Model\Debugger\GetScopeChainRequest;
+use ChromeDevtoolsProtocol\Model\Debugger\GetScopeChainResponse;
 use ChromeDevtoolsProtocol\Model\Debugger\GetScriptSourceRequest;
 use ChromeDevtoolsProtocol\Model\Debugger\GetScriptSourceResponse;
 use ChromeDevtoolsProtocol\Model\Debugger\GetStackTraceRequest;
@@ -136,6 +138,17 @@ interface DebuggerDomainInterface
 		ContextInterface $ctx,
 		GetPossibleBreakpointsRequest $request
 	): GetPossibleBreakpointsResponse;
+
+
+	/**
+	 * Returns the current scope chain of the given call frame. Unlike the scope chain reported with the `paused` event, it reflects changes made to variables since then (e.g. via `evaluateOnCallFrame` or `setVariableValue`).
+	 *
+	 * @param ContextInterface $ctx
+	 * @param GetScopeChainRequest $request
+	 *
+	 * @return GetScopeChainResponse
+	 */
+	public function getScopeChain(ContextInterface $ctx, GetScopeChainRequest $request): GetScopeChainResponse;
 
 
 	/**
