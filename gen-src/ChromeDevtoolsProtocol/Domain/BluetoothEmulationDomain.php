@@ -22,6 +22,7 @@ use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateAdvertisementRequest
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateCharacteristicOperationResponseRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateDescriptorOperationResponseRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateGATTDisconnectionRequest;
+use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateGATTMtuChangeRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateGATTOperationResponseRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulatePreconnectedPeripheralRequest;
 use ChromeDevtoolsProtocol\SubscriptionInterface;
@@ -121,6 +122,12 @@ class BluetoothEmulationDomain implements BluetoothEmulationDomainInterface
 	public function simulateGATTDisconnection(ContextInterface $ctx, SimulateGATTDisconnectionRequest $request): void
 	{
 		$this->internalClient->executeCommand($ctx, 'BluetoothEmulation.simulateGATTDisconnection', $request);
+	}
+
+
+	public function simulateGATTMtuChange(ContextInterface $ctx, SimulateGATTMtuChangeRequest $request): void
+	{
+		$this->internalClient->executeCommand($ctx, 'BluetoothEmulation.simulateGATTMtuChange', $request);
 	}
 
 

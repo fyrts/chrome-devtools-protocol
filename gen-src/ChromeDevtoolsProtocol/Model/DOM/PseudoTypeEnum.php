@@ -53,6 +53,5 @@ final class PseudoTypeEnum
 	public const SELECT_LISTBOX = 'select-listbox';
 	public const PERMISSION_ICON = 'permission-icon';
 	public const OVERSCROLL_AREA_PARENT = 'overscroll-area-parent';
-	public const OVERSCROLL_BACKDROP = 'overscroll-backdrop';
 	public const SKELETON = 'skeleton';
 }

@@ -21,6 +21,7 @@ use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateAdvertisementRequest
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateCharacteristicOperationResponseRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateDescriptorOperationResponseRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateGATTDisconnectionRequest;
+use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateGATTMtuChangeRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulateGATTOperationResponseRequest;
 use ChromeDevtoolsProtocol\Model\BluetoothEmulation\SimulatePreconnectedPeripheralRequest;
 use ChromeDevtoolsProtocol\SubscriptionInterface;
@@ -182,6 +183,17 @@ interface BluetoothEmulationDomainInterface
 	 * @return void
 	 */
 	public function simulateGATTDisconnection(ContextInterface $ctx, SimulateGATTDisconnectionRequest $request): void;
+
+
+	/**
+	 * Simulates the ATT MTU exchange procedure from Bluetooth Core Specification Vol 3 Part F 3.4.2 establishing |mtu| for the connection to the peripheral with |address|.
+	 *
+	 * @param ContextInterface $ctx
+	 * @param SimulateGATTMtuChangeRequest $request
+	 *
+	 * @return void
+	 */
+	public function simulateGATTMtuChange(ContextInterface $ctx, SimulateGATTMtuChangeRequest $request): void;
 
 
 	/**
