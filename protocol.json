@@ -27878,7 +27878,8 @@
                         "PrerenderHostReused",
                         "FormSubmitWhenPrerendering",
                         "CrossDocumentRestart",
-                        "PrefetchFailedCrossOriginSubframe"
+                        "PrefetchFailedCrossOriginSubframe",
+                        "UnexpectedMainFrameNavigation"
                     ]
                 },
                 {
