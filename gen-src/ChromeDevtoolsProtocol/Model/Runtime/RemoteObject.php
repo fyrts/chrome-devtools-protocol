@@ -33,14 +33,14 @@ final class RemoteObject implements \JsonSerializable
 	public $className;
 
 	/**
-	 * Remote object value in case of primitive values or JSON values (if it was requested).
+	 * Remote object value in case of primitive values or JSON values (if it was requested). Not set in `deep` serialization mode, see `deepSerializedValue`.
 	 *
 	 * @var mixed|null
 	 */
 	public $value;
 
 	/**
-	 * Primitive value which can not be JSON-stringified does not have `value`, but gets this property.
+	 * Primitive value which can not be JSON-stringified does not have `value`, but gets this property. Not set in `deep` serialization mode, see `deepSerializedValue`.
 	 *
 	 * @var string
 	 */
