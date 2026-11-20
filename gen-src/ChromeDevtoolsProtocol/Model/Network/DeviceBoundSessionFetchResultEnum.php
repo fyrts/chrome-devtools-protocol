@@ -88,4 +88,5 @@ final class DeviceBoundSessionFetchResultEnum
 	public const ATTESTATION_CERTIFICATION_ERROR = 'AttestationCertificationError';
 	public const ATTESTATION_SIGNING_ERROR = 'AttestationSigningError';
 	public const FEDERATED_REGISTRATION_REDIRECTED = 'FederatedRegistrationRedirected';
+	public const CROSS_SITE_REFRESH_SESSION_CONFIG = 'CrossSiteRefreshSessionConfig';
 }

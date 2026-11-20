@@ -17,4 +17,7 @@ final class ElementAccessibilityIssueReasonEnum
 	public const INTERACTIVE_CONTENT_OPTION_CHILD = 'InteractiveContentOptionChild';
 	public const INTERACTIVE_CONTENT_LEGEND_CHILD = 'InteractiveContentLegendChild';
 	public const INTERACTIVE_CONTENT_SUMMARY_DESCENDANT = 'InteractiveContentSummaryDescendant';
+	public const ANCHOR_MENU_DESCENDANT = 'AnchorMenuDescendant';
+	public const INTERACTIVE_CONTENT_MENU_DESCENDANT = 'InteractiveContentMenuDescendant';
+	public const TEXT_MENU_DESCENDANT = 'TextMenuDescendant';
 }
