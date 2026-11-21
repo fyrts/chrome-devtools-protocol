@@ -17890,6 +17890,7 @@
                         "CSPViolationReport",
                         "Preflight",
                         "FedCM",
+                        "EmailVerification",
                         "Other"
                     ]
                 },
@@ -18856,6 +18857,7 @@
                                 "SignedExchange",
                                 "preflight",
                                 "FedCM",
+                                "EmailVerification",
                                 "other"
                             ]
                         },
@@ -26274,6 +26276,13 @@
                             "experimental": true,
                             "optional": true,
                             "$ref": "Network.LoaderId"
+                        },
+                        {
+                            "name": "checkForRepost",
+                            "description": "If true and the page has POST data, the browser shows the form resubmission dialog before the reload. The command returns after the user responds to the dialog. If the user cancels the dialog, the command returns an error. The default value is false.",
+                            "experimental": true,
+                            "optional": true,
+                            "type": "boolean"
                         }
                     ]
                 },

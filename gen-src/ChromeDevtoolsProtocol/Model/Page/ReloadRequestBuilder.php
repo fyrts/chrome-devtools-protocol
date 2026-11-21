@@ -12,6 +12,7 @@ final class ReloadRequestBuilder
 	private $ignoreCache;
 	private $scriptToEvaluateOnLoad;
 	private $loaderId;
+	private $checkForRepost;
 
 
 	/**
@@ -23,6 +24,7 @@ final class ReloadRequestBuilder
 		$instance->ignoreCache = $this->ignoreCache;
 		$instance->scriptToEvaluateOnLoad = $this->scriptToEvaluateOnLoad;
 		$instance->loaderId = $this->loaderId;
+		$instance->checkForRepost = $this->checkForRepost;
 		return $instance;
 	}
 
@@ -59,6 +61,18 @@ final class ReloadRequestBuilder
 	public function setLoaderId($loaderId): self
 	{
 		$this->loaderId = $loaderId;
+		return $this;
+	}
+
+
+	/**
+	 * @param bool|null $checkForRepost
+	 *
+	 * @return self
+	 */
+	public function setCheckForRepost($checkForRepost): self
+	{
+		$this->checkForRepost = $checkForRepost;
 		return $this;
 	}
 }

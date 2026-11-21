@@ -29,5 +29,6 @@ final class ResourceTypeEnum
 	public const CSP_VIOLATION_REPORT = 'CSPViolationReport';
 	public const PREFLIGHT = 'Preflight';
 	public const FED_C_M = 'FedCM';
+	public const EMAIL_VERIFICATION = 'EmailVerification';
 	public const OTHER = 'Other';
 }

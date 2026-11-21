@@ -32,6 +32,13 @@ final class ReloadRequest implements \JsonSerializable
 	 */
 	public $loaderId;
 
+	/**
+	 * If true and the page has POST data, the browser shows the form resubmission dialog before the reload. The command returns after the user responds to the dialog. If the user cancels the dialog, the command returns an error. The default value is false.
+	 *
+	 * @var bool|null
+	 */
+	public $checkForRepost;
+
 
 	/**
 	 * @param object $data
@@ -49,6 +56,9 @@ final class ReloadRequest implements \JsonSerializable
 		if (isset($data->loaderId)) {
 			$instance->loaderId = (string)$data->loaderId;
 		}
+		if (isset($data->checkForRepost)) {
+			$instance->checkForRepost = (bool)$data->checkForRepost;
+		}
 		return $instance;
 	}
 
@@ -65,6 +75,9 @@ final class ReloadRequest implements \JsonSerializable
 		}
 		if ($this->loaderId !== null) {
 			$data->loaderId = $this->loaderId;
+		}
+		if ($this->checkForRepost !== null) {
+			$data->checkForRepost = $this->checkForRepost;
 		}
 		return $data;
 	}
