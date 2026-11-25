@@ -104,6 +104,9 @@ final class InspectorIssueDetails implements \JsonSerializable
 	/** @var WebInstallIssueDetails|null */
 	public $webInstallIssueDetails;
 
+	/** @var ViewportFitCoverMissingSafeAreaInsetTopIssueDetails|null */
+	public $viewportFitCoverMissingSafeAreaInsetTopIssueDetails;
+
 
 	/**
 	 * @param object $data
@@ -205,6 +208,9 @@ final class InspectorIssueDetails implements \JsonSerializable
 		if (isset($data->webInstallIssueDetails)) {
 			$instance->webInstallIssueDetails = WebInstallIssueDetails::fromJson($data->webInstallIssueDetails);
 		}
+		if (isset($data->viewportFitCoverMissingSafeAreaInsetTopIssueDetails)) {
+			$instance->viewportFitCoverMissingSafeAreaInsetTopIssueDetails = ViewportFitCoverMissingSafeAreaInsetTopIssueDetails::fromJson($data->viewportFitCoverMissingSafeAreaInsetTopIssueDetails);
+		}
 		return $instance;
 	}
 
@@ -305,6 +311,9 @@ final class InspectorIssueDetails implements \JsonSerializable
 		}
 		if ($this->webInstallIssueDetails !== null) {
 			$data->webInstallIssueDetails = $this->webInstallIssueDetails->jsonSerialize();
+		}
+		if ($this->viewportFitCoverMissingSafeAreaInsetTopIssueDetails !== null) {
+			$data->viewportFitCoverMissingSafeAreaInsetTopIssueDetails = $this->viewportFitCoverMissingSafeAreaInsetTopIssueDetails->jsonSerialize();
 		}
 		return $data;
 	}

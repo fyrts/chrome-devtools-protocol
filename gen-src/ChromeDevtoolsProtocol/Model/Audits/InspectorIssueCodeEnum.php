@@ -42,4 +42,5 @@ final class InspectorIssueCodeEnum
 	public const EMAIL_VERIFICATION_REQUEST_ISSUE = 'EmailVerificationRequestIssue';
 	public const LAZY_LOAD_IMAGE_ISSUE = 'LazyLoadImageIssue';
 	public const WEB_INSTALL_ISSUE = 'WebInstallIssue';
+	public const VIEWPORT_FIT_COVER_MISSING_SAFE_AREA_INSET_TOP_ISSUE = 'ViewportFitCoverMissingSafeAreaInsetTopIssue';
 }
