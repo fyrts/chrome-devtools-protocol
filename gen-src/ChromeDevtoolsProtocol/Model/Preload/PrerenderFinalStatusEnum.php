@@ -89,4 +89,5 @@ final class PrerenderFinalStatusEnum
 	public const CROSS_DOCUMENT_RESTART = 'CrossDocumentRestart';
 	public const PREFETCH_FAILED_CROSS_ORIGIN_SUBFRAME = 'PrefetchFailedCrossOriginSubframe';
 	public const UNEXPECTED_MAIN_FRAME_NAVIGATION = 'UnexpectedMainFrameNavigation';
+	public const AUDIO_OUTPUT = 'AudioOutput';
 }

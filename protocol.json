@@ -18255,6 +18255,13 @@
                             "experimental": true,
                             "optional": true,
                             "type": "boolean"
+                        },
+                        {
+                            "name": "adProvenance",
+                            "description": "The provenance of an ad resource request, if it is ad-related and provenance is available.",
+                            "experimental": true,
+                            "optional": true,
+                            "$ref": "AdProvenance"
                         }
                     ]
                 },
@@ -27898,7 +27905,8 @@
                         "FormSubmitWhenPrerendering",
                         "CrossDocumentRestart",
                         "PrefetchFailedCrossOriginSubframe",
-                        "UnexpectedMainFrameNavigation"
+                        "UnexpectedMainFrameNavigation",
+                        "AudioOutput"
                     ]
                 },
                 {

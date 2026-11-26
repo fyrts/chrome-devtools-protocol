@@ -109,6 +109,13 @@ final class Request implements \JsonSerializable
 	 */
 	public $isAdRelated;
 
+	/**
+	 * The provenance of an ad resource request, if it is ad-related and provenance is available.
+	 *
+	 * @var AdProvenance|null
+	 */
+	public $adProvenance;
+
 
 	/**
 	 * @param object $data
@@ -162,6 +169,9 @@ final class Request implements \JsonSerializable
 		if (isset($data->isAdRelated)) {
 			$instance->isAdRelated = (bool)$data->isAdRelated;
 		}
+		if (isset($data->adProvenance)) {
+			$instance->adProvenance = AdProvenance::fromJson($data->adProvenance);
+		}
 		return $instance;
 	}
 
@@ -214,6 +224,9 @@ final class Request implements \JsonSerializable
 		}
 		if ($this->isAdRelated !== null) {
 			$data->isAdRelated = $this->isAdRelated;
+		}
+		if ($this->adProvenance !== null) {
+			$data->adProvenance = $this->adProvenance->jsonSerialize();
 		}
 		return $data;
 	}
