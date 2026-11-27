@@ -12,7 +12,7 @@ namespace ChromeDevtoolsProtocol\Model\Browser;
 final class AddMockCameraRequest implements \JsonSerializable
 {
 	/**
-	 * Required non-empty identifier for the mock camera within the current DevTools session. Different sessions can use the same identifier without replacing each other's cameras. This is not the MediaDeviceInfo.deviceId exposed to the page.
+	 * Required non-empty identifier for the mock camera within the current DevTools session. Different sessions can use the same identifier without replacing each other's cameras. This is not the MediaDeviceInfo.deviceId exposed to the page. An identifier that is already registered or being registered in this session is rejected. The existing camera or registration attempt is left unchanged, including any active streams.
 	 *
 	 * @var string
 	 */
